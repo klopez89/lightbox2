@@ -355,6 +355,14 @@
         }
       }
       self.sizeContainer($image.width(), $image.height());
+      
+       var window_height = windowHeight;
+       var img_height = $image.height();
+       var scroll_offset  = $(window).scrollTop();
+       var view_offset = window_height/2 - img_height/2;
+       var top_distance = scroll_offset + view_offset;
+       self.$lightbox.css('top', top_distance+'px');
+      
     };
 
     // Preload image before showing
