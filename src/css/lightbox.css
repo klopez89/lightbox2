@@ -164,12 +164,22 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1rem;
 }
 
 .lb-data .lb-caption a {
+  color: #4ae;
+}
+
+.lb-data .lb-prompt {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1rem;
+}
+
+.lb-data .lb-prompt a {
   color: #4ae;
 }
 

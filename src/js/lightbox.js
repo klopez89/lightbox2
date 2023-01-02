@@ -111,7 +111,36 @@
     // on the page below.
     //
     // Github issue: https://github.com/lokesh/lightbox2/issues/663
-    $('<div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div><div id="lightbox" tabindex="-1" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/><div class="lb-nav"><a class="lb-prev" aria-label="Previous image" href="" ></a><a class="lb-next" aria-label="Next image" href="" ></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>').appendTo($('body'));
+    html_string = `
+      <div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div>
+      <div id="lightbox" tabindex="-1" class="lightbox">
+        <div class="lb-outerContainer">
+          <div class="lb-container">
+            <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+            <div class="lb-nav">
+              <a class="lb-prev" aria-label="Previous image" href="" ></a>
+              <a class="lb-next" aria-label="Next image" href="" ></a>
+            </div>
+            <div class="lb-loader">
+              <a class="lb-cancel"></a>
+            </div>
+          </div>
+        </div>
+        <div class="lb-dataContainer">
+          <div class="lb-data">
+            <div class="lb-details">
+              <span class="lb-prompt"></span>
+              <span class="lb-caption"></span>
+              <span class="lb-number"></span>
+            </div>
+            <div class="lb-closeContainer">
+              <a class="lb-close"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+    $(html_string).appendTo($('body'));
 
     // Cache jQuery objects
     this.$lightbox       = $('#lightbox');
@@ -217,11 +246,13 @@
     this.album = [];
     var imageNumber = 0;
 
+// TODO
     function addToAlbum($link) {
       self.album.push({
         alt: $link.attr('data-alt'),
         link: $link.attr('href'),
         title: $link.attr('data-title') || $link.attr('title')
+        prompt: $link.attr('data-prompt')
       });
     }
 
@@ -282,7 +313,7 @@
     // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
     $('.lb-loader').fadeIn('slow');
-    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
+    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-prompt').hide();
     this.$outerContainer.addClass('animating');
 
     // When image to show is preloaded, we send the width and height to sizeContainer()
@@ -471,6 +502,17 @@
   // Display caption, image number, and closing button.
   Lightbox.prototype.updateDetails = function() {
     var self = this;
+
+    if (typeof this.album[this.currentImageIndex].prompt !== 'undefined' &&
+      this.album[this.currentImageIndex].prompt !== '') {
+      var $caption = this.$lightbox.find('.lb-prompt');
+      if (this.options.sanitizeTitle) {
+        $caption.text(this.album[this.currentImageIndex].prompt);
+      } else {
+        $caption.html(this.album[this.currentImageIndex].prompt);
+      }
+      $caption.fadeIn('fast');
+    }
 
     // Enable anchor clicks in the injected caption html.
     // Thanks Nate Wright for the fix. @https://github.com/NateWr
