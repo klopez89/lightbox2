@@ -140,7 +140,8 @@
         </div>
       </div>
     `
-    $(html_string).appendTo($('body'));
+    let html_element = $($.parseHTML(html_string));
+    html_element.appendTo($('body'));
 
     // Cache jQuery objects
     this.$lightbox       = $('#lightbox');
