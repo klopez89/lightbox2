@@ -163,17 +163,10 @@ body.lb-disable-scrolling {
   line-height: 1.1em;
 }
 
-.lb-data .lb-caption {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1rem;
-}
-
-.lb-data .lb-caption a {
-  color: #4ae;
-}
-
 .lb-data .lb-prompt {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 5px;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1rem;
@@ -181,7 +174,17 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-prompt a {
-  color: #4ae;
+  color: white;
+}
+
+.lb-data .lb-caption {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1rem;
+}
+
+.lb-data .lb-caption a {
+  color: white;
 }
 
 .lb-data .lb-number {
