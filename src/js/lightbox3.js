@@ -114,6 +114,10 @@
     html_string = `
       <div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay"></div>
       <div id="lightbox" tabindex="-1" class="lightbox">
+        <div class="lb-nav">
+          <a class="lb-prev" aria-label="Previous image" href="" ></a>
+          <a class="lb-next" aria-label="Next image" href="" ></a>
+        </div>
         <div class="lightbox-container">
           <div class="lb-dataContainer">
             <div class="lb-data">
@@ -130,10 +134,6 @@
           <div class="lb-outerContainer">
             <div class="lb-container">
               <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
-              <div class="lb-nav">
-                <a class="lb-prev" aria-label="Previous image" href="" ></a>
-                <a class="lb-next" aria-label="Next image" href="" ></a>
-              </div>
               <div class="lb-loader">
                 <a class="lb-cancel"></a>
               </div>
