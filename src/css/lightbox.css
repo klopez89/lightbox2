@@ -14,6 +14,7 @@ body.lb-disable-scrolling {
 }
 
 .lightbox {
+  display: flex;
   position: absolute;
   left: 0;
   width: 100%;
@@ -22,6 +23,7 @@ body.lb-disable-scrolling {
   line-height: 0;
   font-weight: normal;
   outline: none;
+  justify-content: center;
 }
 
 .lightbox .lb-image {
@@ -39,8 +41,12 @@ body.lb-disable-scrolling {
   border: none;
 }
 
+.lightbox-container {
+  display: flex;
+}
+
 .lb-outerContainer {
-  position: relative;
+  display: block;
   *zoom: 1;
   width: 250px;
   height: 250px;
@@ -137,8 +143,9 @@ body.lb-disable-scrolling {
 }
 
 .lb-dataContainer {
+  display: inline-block;
   margin: 0 auto;
-  padding-top: 5px;
+  padding: 15px;
   *zoom: 1;
   width: 100%;
   border-bottom-left-radius: 4px;
