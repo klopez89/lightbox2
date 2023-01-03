@@ -121,13 +121,13 @@
         <div class="lightbox-container">
           <div class="lb-dataContainer">
             <div class="lb-data">
+              <div class="lb-closeContainer">
+                <a class="lb-close"></a>
+              </div>
               <div class="lb-details">
                 <span class="lb-prompt"></span>
                 <span class="lb-caption"></span>
                 <span class="lb-number"></span>
-              </div>
-              <div class="lb-closeContainer">
-                <a class="lb-close"></a>
               </div>
             </div>
           </div>
