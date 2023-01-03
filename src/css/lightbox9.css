@@ -209,13 +209,16 @@ body.lb-disable-scrolling {
   text-decoration: none;
 }
 
+.lb-data .lb-caption a:hover {
+  color: cornflowerblue;
+}
+
 .lb-data .lb-number {
   display: block;
   clear: left;
   padding-bottom: 1em;
   font-size: 12px;
   color: #999999;
-  margin-top: 10px;
 }
 
 .lb-data .lb-close {
