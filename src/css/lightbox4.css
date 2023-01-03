@@ -43,6 +43,7 @@ body.lb-disable-scrolling {
 
 .lightbox-container {
   display: flex;
+  z-index: 20;
 }
 
 .lb-outerContainer {
