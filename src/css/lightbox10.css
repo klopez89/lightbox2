@@ -178,9 +178,9 @@ body.lb-disable-scrolling {
   display: block;
   margin-bottom: 10px;
   margin-top: 5px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1rem;
+  line-height: 1.8rem;
   color: white;
 }
 
@@ -194,14 +194,14 @@ body.lb-disable-scrolling {
 }
 
 .prompt-timestamp {
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 0.8rem;
 }
 
 .lb-data .lb-caption {
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1rem;
+  line-height: 1.4rem;
 }
 
 .lb-data .lb-caption a {
