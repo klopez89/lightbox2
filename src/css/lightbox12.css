@@ -189,6 +189,10 @@ body.lb-disable-scrolling {
   text-decoration: none;
 }
 
+.lb-data .lb-prompt a:hover {
+  color: cornflowerblue;
+}
+
 .prompt-detail-copy-link {
   font-weight: bold;
 }
@@ -242,3 +246,23 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+  .lightbox-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .lb-data .lb-details {
+    margin-top: 10px;
+  }
+
+  .lb-data .lb-close {
+    float: right;
+  }
+}
+
+
