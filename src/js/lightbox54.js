@@ -473,11 +473,10 @@
       console.log('lb_prompt_element is: ', lb_prompt_element);
       console.log('lb_prompt_txt is: ', lb_prompt_txt);
 
+      console.log('in postresize, newHeight is: ', newHeight);
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
       console.log('in postresize, window_height is: ', window_height);
       console.log('in postresize, scroll_offset is: ', scroll_offset);
-
-
 
       var view_offset = window_height/2 - (newHeight)/2;
       if (window_width <= 1200) {
