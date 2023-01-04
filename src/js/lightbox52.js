@@ -402,19 +402,19 @@
        var scroll_offset  = $(window).scrollTop();
 
 
-       view_offset_subtraction = img_height/2;
+       // view_offset_subtraction = img_height/2;
 
-       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+       // let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
 
-       console.log('dataContainer_height is: ', dataContainer_height);
+       // console.log('dataContainer_height is: ', dataContainer_height);
 
-       var view_offset = window_height/2 - view_offset_subtraction;
-       if (windowWidth <= 1200) {
-        view_offset = 20;
-       }
+       // var view_offset = window_height/2 - view_offset_subtraction;
+       // if (windowWidth <= 1200) {
+       //  view_offset = 20;
+       // }
 
-       var top_distance = scroll_offset + view_offset;
-       self.$lightbox.css('top', top_distance+'px');
+       // var top_distance = scroll_offset + view_offset;
+       // self.$lightbox.css('top', top_distance+'px');
       
     };
 
