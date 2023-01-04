@@ -402,11 +402,13 @@
        var scroll_offset  = $(window).scrollTop();
 
 
-       const display_val = self.$lbContainer.style.flexDirection;
        view_offset_subtraction = img_height/2;
 
-       if (display_val == 'column-reverse') {
-        view_offset_subtraction = (img_height + self.$dataContainer.height())/2;
+       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+       console.log('dataContainer_height is: ', dataContainer_height);
+
+       if (windowWidth <= 1200) {
+        view_offset_subtraction = (img_height * 2)/2;
        }
 
        var view_offset = window_height/2 - view_offset_subtraction;
