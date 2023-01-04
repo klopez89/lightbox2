@@ -481,7 +481,7 @@
 
       var view_offset = window_height/2 - (newHeight)/2;
       if (window_width <= 1200) {
-        view_offset = window_height/2 - (newHeight + dataContainer_height)/2;;
+        view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
       }
 
       console.log('in postresize, view_offset is: ', view_offset);
