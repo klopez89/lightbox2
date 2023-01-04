@@ -463,9 +463,9 @@
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
-      let lb_prompt_val = $(lb_prompt_element).find('.prompt-detail-copy-link')[0].getAttribute('val');
+      let lb_prompt_link = $(lb_prompt_element).find('a');
       console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_prompt_link is: ', lb_prompt_val);
+      console.log('lb_prompt_link is: ', lb_prompt_link);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
