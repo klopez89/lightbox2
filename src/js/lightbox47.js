@@ -452,6 +452,8 @@
     var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
 
     function postResize() {
+      self.updateDetails();
+
       self.$lightbox.find('.lb-dataContainer').width(newWidth - 30); // 30 is pertaining to the left and right padding of 15px
       self.$lightbox.find('.lb-prev').height(newHeight);
       self.$lightbox.find('.lb-next').height(newHeight);
@@ -495,11 +497,9 @@
         width: newWidth,
         height: newHeight
       }, this.options.resizeDuration, 'swing', function() {
-      this.updateDetails();
-      postResize();
+        postResize();
       });
     } else {
-      this.updateDetails();
       postResize();
     }
   };
