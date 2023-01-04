@@ -466,7 +466,7 @@
 
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
-      let lb_a_element = $(lb_prompt_element).find('a')[0];
+      let lb_prompt_txt = $(lb_prompt_element).find('a')[0].innerHTML;
 
 
 
@@ -474,11 +474,17 @@
       console.log('lb_a_element text is: ', lb_a_element.innerHTML);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
+      console.log('in postresize, window_height is: ', window_height);
+      console.log('in postresize, scroll_offset is: ', scroll_offset);
+
+
 
       var view_offset = window_height/2 - (newHeight)/2;
       if (window_width <= 1200) {
         view_offset = window_height/2 - (newHeight + dataContainer_height)/2;;
       }
+
+      console.log('in postresize, view_offset is: ', view_offset);
 
       var top_distance = scroll_offset + view_offset;
       self.$lightbox.css('top', top_distance+'px');
