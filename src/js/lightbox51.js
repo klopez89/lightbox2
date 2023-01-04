@@ -471,7 +471,7 @@
 
 
       console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_a_element text is: ', lb_a_element.innerHTML);
+      console.log('lb_prompt_txt is: ', lb_prompt_txt);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
       console.log('in postresize, window_height is: ', window_height);
