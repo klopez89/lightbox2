@@ -346,6 +346,8 @@
       maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
       maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
 
+      console.log(`early onload, windowWidth: ${windowWidth}, windowHeight: ${windowHeight}, maxImageWidth: ${maxImageWidth}, maxImageHeight: ${maxImageHeight} `)
+
       /*
       Since many SVGs have small intrinsic dimensions, but they support scaling
       up without quality loss because of their vector format, max out their
@@ -387,6 +389,10 @@
           $image.height(imageHeight);
         }
       }
+
+      size_container_width = $image.width();
+      size_container_height = $image.height();
+      console.log(`size container width: ${size_container_width}, size container height: ${size_container_height}`)
       self.sizeContainer($image.width(), $image.height());
       
        var window_height = windowHeight;
@@ -441,6 +447,8 @@
 
       self.showImage();
     }
+
+    console.log(`in sizeContainer function, oldWidth: ${oldWidth}, oldHeight: ${oldHeight}, newWidth: ${newWidth}, newHeight: ${newHeight}`)
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {
       this.$outerContainer.animate({
