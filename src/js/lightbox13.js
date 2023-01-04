@@ -409,7 +409,7 @@
        console.log('dataContainer_height is: ', dataContainer_height);
 
        if (windowWidth <= 1200) {
-        view_offset_subtraction = (img_height + dataContainer_height)/2;
+        view_offset_subtraction = (img_height + 250)/2;
        }
 
        var view_offset = window_height/2 - view_offset_subtraction;
