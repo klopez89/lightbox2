@@ -462,15 +462,12 @@
       var window_width = $(window).width();
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-      let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
+      let lb_a_element = self.$lightbox.find('[prompt-detail="prompt"]');
 
-      for (const child of lb_prompt_element.childNodes) {
-        console.log('the prompt child is ', child);
-      }
 
       // let lb_prompt_link = lb_prompt_element.innerHTML;
-      console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_prompt_element type is: ', typeof lb_prompt_element);
+      console.log('lb_a_element is: ', lb_a_element);
+      console.log('lb_a_element type is: ', typeof lb_a_element);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
