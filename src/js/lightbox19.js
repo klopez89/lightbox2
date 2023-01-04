@@ -458,7 +458,7 @@
       self.$lightbox.find('.lb-nav').height(newHeight);
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
-      var windowHeight = $(window).height();
+      var window_height = $(window).height();
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
