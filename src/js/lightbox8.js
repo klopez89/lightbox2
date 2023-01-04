@@ -147,6 +147,7 @@
     // Cache jQuery objects
     this.$lightbox       = $('#lightbox');
     this.$overlay        = $('#lightboxOverlay');
+    this.$dataContainer  = this.$lightbox.find('.lb-dataContainer');
     this.$outerContainer = this.$lightbox.find('.lb-outerContainer');
     this.$container      = this.$lightbox.find('.lb-container');
     this.$image          = this.$lightbox.find('.lb-image');
@@ -398,7 +399,16 @@
        var window_height = windowHeight;
        var img_height = $image.height();
        var scroll_offset  = $(window).scrollTop();
-       var view_offset = window_height/2 - img_height/2;
+
+       const lb_container = document.getElementById('lightbox-container');
+       const display_val = lb_container.style.flexDirection;
+
+       view_offset_subtraction = img_height/2;
+       if (display_val == 'column-reverse') {
+        view_offset_subtraction = (img_height + $dataContainer.height())/2;
+       }
+
+       var view_offset = window_height/2 - view_offset_subtraction;
        var top_distance = scroll_offset + view_offset;
        self.$lightbox.css('top', top_distance+'px');
       
@@ -438,7 +448,7 @@
     var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
 
     function postResize() {
-      self.$lightbox.find('.lb-dataContainer').width(newWidth);
+      self.$lightbox.find('.lb-dataContainer').width(newWidth - 30); // 30 is pertaining to the left and right padding of 15px
       self.$lightbox.find('.lb-prevLink').height(newHeight);
       self.$lightbox.find('.lb-nextLink').height(newHeight);
 
