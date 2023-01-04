@@ -464,7 +464,7 @@
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
 
-      for (const child of lb_prompt_element.children) {
+      for (const child of lb_prompt_element.childNodes) {
         console.log('the prompt child is ', child);
       }
 
