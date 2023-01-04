@@ -273,6 +273,19 @@ body.lb-disable-scrolling {
   .lb-data .lb-close {
     float: right;
   }
+
+  .lb-nav {
+    height: 520px;
+    z-index: 21;
+  }
+
+  .lb-nav a.lb-prev {
+    width: 35%;
+  }
+
+    .lb-nav a.lb-next {
+    width: 35%;
+  }
 }
 
 
