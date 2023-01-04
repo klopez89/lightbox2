@@ -465,7 +465,7 @@
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
       let lb_prompt_link = lb_prompt_element.innerHTML;
       console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_prompt_link is: ', lb_prompt_link);
+      console.log('lb_prompt_element type is: ', typeof lb_prompt_element);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
