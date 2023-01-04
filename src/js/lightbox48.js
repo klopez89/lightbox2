@@ -463,14 +463,15 @@
       var window_height = $(window).height();
       var window_width = $(window).width();
       var scroll_offset  = $(window).scrollTop();
+
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
-      lb_a_element = $(lb_prompt_element).find('a');
+      let lb_a_element = $(lb_prompt_element).find('a')[0];
 
 
-      // let lb_prompt_link = lb_prompt_element.innerHTML;
+
       console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_a_element is: ', lb_a_element);
+      console.log('lb_a_element text is: ', lb_a_element.innerHTML);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
