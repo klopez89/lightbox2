@@ -455,6 +455,7 @@
       self.$lightbox.find('.lb-dataContainer').width(newWidth - 30); // 30 is pertaining to the left and right padding of 15px
       self.$lightbox.find('.lb-prev').height(newHeight);
       self.$lightbox.find('.lb-next').height(newHeight);
+      self.$lightbox.find('.lb-nav').height(newHeight);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();

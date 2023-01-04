@@ -267,7 +267,8 @@ body.lb-disable-scrolling {
   }
 
   .lb-data .lb-details {
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-left: 0px; 
   }
 
   .lb-data .lb-close {
