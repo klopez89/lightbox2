@@ -147,6 +147,7 @@
     // Cache jQuery objects
     this.$lightbox       = $('#lightbox');
     this.$overlay        = $('#lightboxOverlay');
+    this.$lbContainer    = this.$lightbox.find('.lightbox-container');
     this.$dataContainer  = this.$lightbox.find('.lb-dataContainer');
     this.$outerContainer = this.$lightbox.find('.lb-outerContainer');
     this.$container      = this.$lightbox.find('.lb-container');
@@ -400,10 +401,10 @@
        var img_height = $image.height();
        var scroll_offset  = $(window).scrollTop();
 
-       const lb_container = document.getElementById('lightbox-container');
-       const display_val = lb_container.style.flexDirection;
 
+       const display_val = $lbContainer.style.flexDirection;
        view_offset_subtraction = img_height/2;
+       
        if (display_val == 'column-reverse') {
         view_offset_subtraction = (img_height + $dataContainer.height())/2;
        }
