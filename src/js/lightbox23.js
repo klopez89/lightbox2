@@ -462,7 +462,7 @@
       var window_width = $(window).width();
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-      let lb_prompt_content = self.$lightbox.find('lb-prompt');
+      let lb_prompt_content = self.$lightbox.find('.lb-prompt');
       console.log('lb_prompt_content is: ', lb_prompt_content);
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
