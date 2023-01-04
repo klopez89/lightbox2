@@ -459,12 +459,13 @@
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
       var window_height = $(window).height();
+      var window_width = $(window).width();
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
 
       var view_offset = window_height/2 - (newHeight)/2;
-      if (windowWidth <= 1200) {
+      if (window_width <= 1200) {
         view_offset = window_height/2 - (newHeight + dataContainer_height)/2;;
       }
 
