@@ -463,7 +463,7 @@
       var scroll_offset  = $(window).scrollTop();
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
       let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
-      let lb_prompt_link = lb_prompt_element.children('a');
+      let lb_prompt_link = $(lb_prompt_element).find('.prompt-detail-copy-link');
       console.log('lb_prompt_element is: ', lb_prompt_element);
       console.log('lb_prompt_link is: ', lb_prompt_link);
 
