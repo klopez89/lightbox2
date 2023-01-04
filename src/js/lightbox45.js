@@ -466,7 +466,7 @@
 
 
       // let lb_prompt_link = lb_prompt_element.innerHTML;
-      console.log('lb_prompt_element outerHTML is: ', lb_prompt_element.outerHTML);
+      console.log('lb_prompt_element innerHTML is: ', lb_prompt_element.innerHTML);
       console.log('lb_a_element type is: ', typeof lb_prompt_element);
 
       console.log('in postresize, dataContainer_height is: ', dataContainer_height);
