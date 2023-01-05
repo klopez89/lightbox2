@@ -440,7 +440,12 @@
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
 
-       var window_height = window.screen.availHeight;
+       var window_height = Math.max(
+         document.documentElement.clientHeight || 0,
+         window.innerHeight || 0
+       );
+
+       
        var window_width = $(window).width();
 
        var scroll_offset  = $(window).scrollTop();
