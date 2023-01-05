@@ -399,7 +399,7 @@
     //   size_container_height = $image.height();
     //   console.log(`size container width: ${size_container_width}, size container height: ${size_container_height}`)
     //   self.sizeContainer($image.width(), $image.height());
-    // };
+    };
 
     // // Preload image before showing
     // preloader.src = this.album[imageNumber].link;
