@@ -308,8 +308,8 @@
 
     this.changeImage(imageNumber);
 
-    // image_height = $image.height();
-    // console.log(`The after image height is: ${image_height}`);
+    let image_height = self.$image.height();
+    console.log(`The after image height is: ${image_height}`);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
