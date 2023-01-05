@@ -444,8 +444,8 @@
 
 
 
-      var scroll_offset  = $(window).scrollTop();
-      self.$lightbox.css('top', `calc(50% + ${scroll_offset}px) - env(safe-area-inset-bottom)`);
+      // var scroll_offset  = $(window).scrollTop();
+      self.$lightbox.css('top', `calc(50vh - env(safe-area-inset-bottom)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
