@@ -292,8 +292,8 @@
     let scroll_offset = $(window).scrollTop();
     this.$lightbox.css({
       top: `calc(50% + ${scroll_offset}px)`,
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
+      left: '50%'
+      // transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
 
     // Disable scrolling of the page while open
