@@ -315,6 +315,9 @@
     this.disableKeyboardNav();
 
     // Show loading state
+    window_innerHeight = $(window).innerHeight;
+    $('.lb-loader').css('top', (window_innerHeight/2)+'px');
+
     this.$overlay.fadeIn(this.options.fadeDuration);
     $('.lb-loader').fadeIn('slow');
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-prompt').hide();
@@ -396,26 +399,6 @@
       size_container_height = $image.height();
       console.log(`size container width: ${size_container_width}, size container height: ${size_container_height}`)
       self.sizeContainer($image.width(), $image.height());
-      
-       var window_height = windowHeight;
-       var img_height = $image.height();
-       var scroll_offset  = $(window).scrollTop();
-
-
-       // view_offset_subtraction = img_height/2;
-
-       // let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-
-       // console.log('dataContainer_height is: ', dataContainer_height);
-
-       // var view_offset = window_height/2 - view_offset_subtraction;
-       // if (windowWidth <= 1200) {
-       //  view_offset = 20;
-       // }
-
-       // var top_distance = scroll_offset + view_offset;
-       // self.$lightbox.css('top', top_distance+'px');
-      
     };
 
     // Preload image before showing
@@ -465,30 +448,14 @@
       var scroll_offset  = $(window).scrollTop();
 
       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-      let lb_prompt_element = self.$lightbox.find('.lb-prompt')[0];
-      let lb_prompt_txt = $(lb_prompt_element).find('a')[0].innerHTML;
-
-
-
-      console.log('lb_prompt_element is: ', lb_prompt_element);
-      console.log('lb_prompt_txt is: ', lb_prompt_txt);
-
-      console.log('in postresize, newHeight is: ', newHeight);
-      console.log('in postresize, dataContainer_height is: ', dataContainer_height);
-      console.log('in postresize, window_height is: ', window_height);
-      console.log('in postresize, scroll_offset is: ', scroll_offset);
-
       var view_offset = window_height/2 - (newHeight)/2;
+
       if (window_width <= 1200) {
         view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
       }
 
-      console.log('in postresize, view_offset is: ', view_offset);
-
       var top_distance = scroll_offset + view_offset;
       self.$lightbox.css('top', top_distance+'px');
-
-
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();
