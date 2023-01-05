@@ -437,9 +437,6 @@
       self.$lightbox.find('.lb-nav').height(newHeight);
 
 
-
-
-
       // Adjust the center point of the lightbox vertically now that the text content has been laid
 
        // var window_height = window.innerHeight;
@@ -467,7 +464,7 @@
       // self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
-      self.$overlay.focus();
+      // self.$overlay.focus();
 
       self.showImage();
     }
