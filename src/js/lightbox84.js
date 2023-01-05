@@ -465,7 +465,7 @@
 
       // var top_distance = scroll_offset + view_offset;
       // console.log(`The top distance for lightbox location is: `, top_distance);
-      self.$lightbox.css('top', `50% + ${scroll_offset}px`);
+      self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();
