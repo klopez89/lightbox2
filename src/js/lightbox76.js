@@ -294,7 +294,7 @@
 
     // console.log(`The before image height is: ${image_height}`);
 
-    var top  = $window.scrollTop() + (window_innerHeight - 250)/2; //this.options.positionFromTop;
+    var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
     var left = $window.scrollLeft();
     this.$lightbox.css({
       top: top + 'px',
@@ -308,8 +308,8 @@
 
     this.changeImage(imageNumber);
 
-    var top_distance = self.topDistance();
-    console.log(`The top distance after change image is: `, top_distance);
+    // var top_distance = self.topDistance();
+    // console.log(`The top distance after change image is: `, this);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
@@ -430,25 +430,6 @@
   };
 
 
-  Lightbox.prototype.topDistance = function() {
-    var self = this;
-    
-    var window_height = window.innerHeight;
-    var window_width = $(window).width();
-    var scroll_offset  = $(window).scrollTop();
-
-    let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-    var view_offset = window_height/2 - (newHeight)/2;
-
-    if (window_width <= 1200) {
-      view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
-    }
-
-    var top_distance = scroll_offset + view_offset;
-    return top_distance;
-  }
-
-
   // Animate the size of the lightbox to fit the image we are showing
   // This method also shows the the image.
   Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
@@ -479,7 +460,18 @@
         view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
       }
 
-      var top_distance = self.topDistance();
+      var window_height = window.innerHeight;
+      var window_width = $(window).width();
+      var scroll_offset  = $(window).scrollTop();
+
+      let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+      var view_offset = window_height/2 - (newHeight)/2;
+
+      if (window_width <= 1200) {
+        view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
+      }
+
+      var top_distance = scroll_offset + view_offset;
       console.log(`The top distance for lightbox location is: `, top_distance);
       self.$lightbox.css('top', top_distance+'px');
 
