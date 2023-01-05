@@ -289,18 +289,9 @@
     }
 
     // Position Lightbox
-
-    // let window_innerHeight = window.innerHeight;
-    // var image_height = $image.height();
-
-    // console.log(`The before image height is: ${image_height}`);
+    this.$lightbox.find('.lb-loader').stop(true).hide();
 
     let scroll_offset = $(window).scrollTop();
-    // self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
-
-    // var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
-    // var left = $window.scrollLeft();
-    // console.log('scroll left va: ', left);
     this.$lightbox.css({
       top: `calc(50% + ${scroll_offset}px)`,
       left: '50%',
@@ -452,23 +443,7 @@
       self.$lightbox.find('.lb-nav').height(newHeight);
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
-      var window_height = window.innerHeight;
-      var window_width = $(window).width();
-
       var scroll_offset  = $(window).scrollTop();
-
-      let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-      var view_offset = window_height/2 - (newHeight)/2;
-
-      if (window_width <= 1200) {
-        view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
-      }
-
-      console.log('When adjusting for scroll offset, view_offset is: ', view_offset);
-      console.log('When adjusting for scroll offset, scroll_offset is: ', scroll_offset);
-
-      // var top_distance = scroll_offset + view_offset;
-      // console.log(`The top distance for lightbox location is: `, top_distance);
       self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
@@ -476,8 +451,6 @@
 
       self.showImage();
     }
-
-    console.log(`in sizeContainer function, oldWidth: ${oldWidth}, oldHeight: ${oldHeight}, newWidth: ${newWidth}, newHeight: ${newHeight}`)
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {
       this.$outerContainer.animate({
