@@ -288,9 +288,9 @@
     }
 
     // Position Lightbox
-    // let scroll_offset = $(window).scrollTop();
+    let scroll_offset = $(window).scrollTop();
     this.$lightbox.css({
-      top: `calc(50%)`,
+      top: `calc(50% + ${scroll_offset}px)`,
       left: '50%',
       transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
@@ -429,7 +429,7 @@
     var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
 
     function postResize() {
-      self.updateDetails();
+      // self.updateDetails();
 
       self.$lightbox.find('.lb-dataContainer').width(newWidth - 30); // 30 is pertaining to the left and right padding of 15px
       self.$lightbox.find('.lb-prev').height(newHeight);
