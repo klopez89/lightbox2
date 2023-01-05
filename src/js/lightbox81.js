@@ -309,16 +309,6 @@
     }
 
     this.changeImage(imageNumber);
-
-    setTimeout(function() {
-      let loader_height = self.$lightbox.find('.lb-loader').height();
-      console.log(`Loader_height after change image: ${loader_height}`);
-    }, 0);
-
-    // let loader_height = self.$lightbox.find('.lb-loader').height();
-    // console.log(`Loader_height after change image: ${loader_height}`);
-    // var top_distance = self.topDistance();
-    // console.log(`The top distance after change image is: `, this);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
@@ -458,20 +448,20 @@
       self.$lightbox.find('.lb-nav').height(newHeight);
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
-      var window_height = window.innerHeight;
-      var window_width = $(window).width();
-      var scroll_offset  = $(window).scrollTop();
+      // var window_height = window.innerHeight;
+      // var window_width = $(window).width();
+      // var scroll_offset  = $(window).scrollTop();
 
-      let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-      var view_offset = window_height/2 - (newHeight)/2;
+      // let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+      // var view_offset = window_height/2 - (newHeight)/2;
 
-      if (window_width <= 1200) {
-        view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
-      }
+      // if (window_width <= 1200) {
+      //   view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
+      // }
 
-      var top_distance = scroll_offset + view_offset;
-      console.log(`The top distance for lightbox location is: `, top_distance);
-      self.$lightbox.css('top', top_distance+'px');
+      // var top_distance = scroll_offset + view_offset;
+      // console.log(`The top distance for lightbox location is: `, top_distance);
+      // self.$lightbox.css('top', top_distance+'px');
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();
