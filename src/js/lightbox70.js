@@ -309,7 +309,8 @@
     this.changeImage(imageNumber);
 
     // let image_height = self.$image.height();
-    console.log(`The after image height is: nothing!`);
+    var $image = self.$lightbox.find('.lb-image');
+    console.log(`The after image height is: nothing!`, $image);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
