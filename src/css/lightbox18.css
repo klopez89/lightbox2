@@ -56,7 +56,7 @@ body.lb-disable-scrolling {
 
   /* Background color behind image.
      This is visible during transitions. */
-  background-color: white;
+/*  background-color: white;*/
 }
 
 .lb-outerContainer:after {
@@ -198,8 +198,8 @@ body.lb-disable-scrolling {
 }
 
 .prompt-timestamp {
-    margin-top: 10px;
-    font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: 0.8rem;
 }
 
 .lb-data .lb-caption {
