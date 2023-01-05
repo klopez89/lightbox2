@@ -290,11 +290,11 @@
 
     // Position Lightbox
     let window_innerHeight = window.innerHeight;
-    var image_height = $image.height();
+    // var image_height = $image.height();
 
-    console.log(`The before image height is: ${image_height}`);
+    // console.log(`The before image height is: ${image_height}`);
 
-    var top  = $window.scrollTop() + (window_innerHeight - 250) /2; //this.options.positionFromTop;
+    var top  = $window.scrollTop() + (window_innerHeight - 250)/2; //this.options.positionFromTop;
     var left = $window.scrollLeft();
     this.$lightbox.css({
       top: top + 'px',
@@ -308,8 +308,8 @@
 
     this.changeImage(imageNumber);
 
-    image_height = $image.height();
-    console.log(`The after image height is: ${image_height}`);
+    // image_height = $image.height();
+    // console.log(`The after image height is: ${image_height}`);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
