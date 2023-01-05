@@ -296,9 +296,11 @@
 
     var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
     var left = $window.scrollLeft();
+    console.log('scroll left va: ', left);
     this.$lightbox.css({
-      top: top + 'px',
-      left: left + 'px'
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
 
     // Disable scrolling of the page while open
