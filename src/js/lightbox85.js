@@ -289,16 +289,20 @@
     }
 
     // Position Lightbox
-    let window_innerHeight = window.innerHeight;
+
+    // let window_innerHeight = window.innerHeight;
     // var image_height = $image.height();
 
     // console.log(`The before image height is: ${image_height}`);
 
-    var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
-    var left = $window.scrollLeft();
+    let scroll_offset = $(window).scrollTop();
+    // self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
+
+    // var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
+    // var left = $window.scrollLeft();
     console.log('scroll left va: ', left);
     this.$lightbox.css({
-      top: '50%',
+      top: `calc(50% + ${scroll_offset}px)`,
       left: '50%',
       transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
