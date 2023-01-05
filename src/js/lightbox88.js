@@ -244,7 +244,7 @@
     var $window = $(window);
 
     $window.on('resize', $.proxy(this.sizeOverlay, this));
-
+    // self.$lightbox.find('.lb-loader').stop(true).hide();
     this.sizeOverlay();
 
     this.album = [];
@@ -289,8 +289,6 @@
     }
 
     // Position Lightbox
-    this.$lightbox.find('.lb-loader').stop(true).hide();
-
     let scroll_offset = $(window).scrollTop();
     this.$lightbox.css({
       top: `calc(50% + ${scroll_offset}px)`,
@@ -318,7 +316,7 @@
 
     // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
-    $('.lb-loader').fadeIn('slow');
+    // $('.lb-loader').fadeIn('slow');
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-prompt').hide();
     this.$outerContainer.addClass('animating');
 
