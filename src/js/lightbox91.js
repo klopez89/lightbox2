@@ -437,7 +437,33 @@
       self.$lightbox.find('.lb-next').height(newHeight);
       self.$lightbox.find('.lb-nav').height(newHeight);
 
+
+
+
+
       // Adjust the center point of the lightbox vertically now that the text content has been laid
+
+       var window_height = window.innerHeight;
+       var window_width = $(window).width();
+
+       var scroll_offset  = $(window).scrollTop();
+
+       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+       var view_offset = window_height/2 - (newHeight)/2;
+
+       if (window_width <= 1200) {
+         view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
+       }
+
+       console.log('When adjusting for scroll offset, view_offset is: ', view_offset);
+       console.log('When adjusting for scroll offset, scroll_offset is: ', scroll_offset);
+
+       var top_distance = scroll_offset + view_offset;
+       // console.log(`The top distance for lightbox location is: `, top_distance);
+       self.$lightbox.css('top', `${top_distance}`);
+
+
+
       var scroll_offset  = $(window).scrollTop();
       self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
