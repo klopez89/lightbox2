@@ -430,7 +430,7 @@
     var newHeight = imageHeight + this.containerPadding.top + this.containerPadding.bottom + this.imageBorderWidth.top + this.imageBorderWidth.bottom;
 
     function postResize() {
-      // self.updateDetails();
+      self.updateDetails();
 
       self.$lightbox.find('.lb-dataContainer').width(newWidth - 30); // 30 is pertaining to the left and right padding of 15px
       self.$lightbox.find('.lb-prev').height(newHeight);
@@ -440,34 +440,30 @@
 
       // Adjust the center point of the lightbox vertically now that the text content has been laid
 
-       // var window_height = Math.max(
-       //   document.documentElement.clientHeight || 0,
-       //   window.innerHeight || 0
-       // );
+       var window_height = window.innerHeight;
 
        
-       // var window_width = $(window).width();
 
-       // var scroll_offset  = $(window).scrollTop();
+       var scroll_offset  = $(window).scrollTop();
 
-       // let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
-       // var view_offset = window_height/2 - (newHeight)/2;
+       let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+       var view_offset = window_height/2 - (newHeight)/2;
 
-       // if (window_width <= 1200) {
-       //   view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
-       // }
+       if (window_width <= 1200) {
+         view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
+       }
 
-       // console.log('When adjusting for scroll offset, view_offset is: ', view_offset);
-       // console.log('When adjusting for scroll offset, scroll_offset is: ', scroll_offset);
+       console.log('When adjusting for scroll offset, view_offset is: ', view_offset);
+       console.log('When adjusting for scroll offset, scroll_offset is: ', scroll_offset);
 
-       // var top_distance = scroll_offset + view_offset;
-       // // console.log(`The top distance for lightbox location is: `, top_distance);
-       // self.$lightbox.css('top', `${top_distance}`);
-
+       var top_distance = scroll_offset + view_offset;
+       // console.log(`The top distance for lightbox location is: `, top_distance);
+       self.$lightbox.css('top', `${top_distance}`);
 
 
-      var scroll_offset  = $(window).scrollTop();
-      self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
+
+      // var scroll_offset  = $(window).scrollTop();
+      // self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
