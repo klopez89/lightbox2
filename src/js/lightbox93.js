@@ -464,8 +464,8 @@
 
 
 
-      var scroll_offset  = $(window).scrollTop();
-      self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
+      // var scroll_offset  = $(window).scrollTop();
+      // self.$lightbox.css('top', `calc(50% + ${scroll_offset}px)`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       self.$overlay.focus();
