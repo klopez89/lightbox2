@@ -308,10 +308,8 @@
 
     this.changeImage(imageNumber);
 
-    // let image_height = self.$image.height();
-    var $image = self.$lightbox.find('.lb-image');
-    let image_height = $($image[0]).height();
-    console.log(`The after image height is: not nothing`, image_height);
+    var top_distance = self.topDistance();
+    console.log(`The top distance after change image is: `, top_distance);
   };
 
   // Hide most UI elements in preparation for the animated resizing of the lightbox.
@@ -431,6 +429,24 @@
     }, 0);
   };
 
+
+  Lightbox.prototype.topDistance = function() {
+    var window_height = window.innerHeight;
+    var window_width = $(window).width();
+    var scroll_offset  = $(window).scrollTop();
+
+    let dataContainer_height = self.$lightbox.find('.lb-dataContainer').height();
+    var view_offset = window_height/2 - (newHeight)/2;
+
+    if (window_width <= 1200) {
+      view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
+    }
+
+    var top_distance = scroll_offset + view_offset;
+    return top_distance;
+  }
+
+
   // Animate the size of the lightbox to fit the image we are showing
   // This method also shows the the image.
   Lightbox.prototype.sizeContainer = function(imageWidth, imageHeight) {
@@ -461,7 +477,8 @@
         view_offset = window_height/2 - (newHeight + dataContainer_height + 30)/2;;
       }
 
-      var top_distance = scroll_offset + view_offset;
+      var top_distance = self.topDistance();
+      console.log(`The top distance for lightbox location is: `, top_distance);
       self.$lightbox.css('top', top_distance+'px');
 
       // Set focus on one of the two root nodes so keyboard events are captured.
