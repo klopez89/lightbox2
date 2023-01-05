@@ -323,84 +323,81 @@
     // When image to show is preloaded, we send the width and height to sizeContainer()
     var preloader = new Image();
     preloader.onload = function() {
-      var $preloader;
-      var imageHeight;
-      var imageWidth;
-      var maxImageHeight;
-      var maxImageWidth;
-      var windowHeight;
-      var windowWidth;
+      // var $preloader;
+      // var imageHeight;
+      // var imageWidth;
+      // var maxImageHeight;
+      // var maxImageWidth;
+      // var windowHeight;
+      // var windowWidth;
 
-      $image.attr({
-        'alt': self.album[imageNumber].alt,
-        'src': filename
-      });
+      // $image.attr({
+      //   'alt': self.album[imageNumber].alt,
+      //   'src': filename
+      // });
 
-      $preloader = $(preloader);
+      // $preloader = $(preloader);
 
-      $image.width(preloader.width);
-      $image.height(preloader.height);
-      windowWidth = $(window).width();
-      windowHeight = $(window).height();
+      // $image.width(preloader.width);
+      // $image.height(preloader.height);
+      // windowWidth = $(window).width();
+      // windowHeight = $(window).height();
 
-      // Calculate the max image dimensions for the current viewport.
-      // Take into account the border around the image and an additional 10px gutter on each side.
-      maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
-      maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
+      // // Calculate the max image dimensions for the current viewport.
+      // // Take into account the border around the image and an additional 10px gutter on each side.
+      // maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
+      // maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
 
-      console.log(`early onload, windowWidth: ${windowWidth}, windowHeight: ${windowHeight}, maxImageWidth: ${maxImageWidth}, maxImageHeight: ${maxImageHeight} `)
+      // /*
+      // Since many SVGs have small intrinsic dimensions, but they support scaling
+      // up without quality loss because of their vector format, max out their
+      // size.
+      // */
+      // if (filetype === 'svg') {
+      //   $image.width(maxImageWidth);
+      //   $image.height(maxImageHeight);
+      // }
 
-      /*
-      Since many SVGs have small intrinsic dimensions, but they support scaling
-      up without quality loss because of their vector format, max out their
-      size.
-      */
-      if (filetype === 'svg') {
-        $image.width(maxImageWidth);
-        $image.height(maxImageHeight);
-      }
+      // // Fit image inside the viewport.
+      // if (self.options.fitImagesInViewport) {
 
-      // Fit image inside the viewport.
-      if (self.options.fitImagesInViewport) {
+      //   // Check if image size is larger then maxWidth|maxHeight in settings
+      //   if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
+      //     maxImageWidth = self.options.maxWidth;
+      //   }
+      //   if (self.options.maxHeight && self.options.maxHeight < maxImageHeight) {
+      //     maxImageHeight = self.options.maxHeight;
+      //   }
 
-        // Check if image size is larger then maxWidth|maxHeight in settings
-        if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
-          maxImageWidth = self.options.maxWidth;
-        }
-        if (self.options.maxHeight && self.options.maxHeight < maxImageHeight) {
-          maxImageHeight = self.options.maxHeight;
-        }
+      // } else {
+      //   maxImageWidth = self.options.maxWidth || preloader.width || maxImageWidth;
+      //   maxImageHeight = self.options.maxHeight || preloader.height || maxImageHeight;
+      // }
 
-      } else {
-        maxImageWidth = self.options.maxWidth || preloader.width || maxImageWidth;
-        maxImageHeight = self.options.maxHeight || preloader.height || maxImageHeight;
-      }
+      // // Is the current image's width or height is greater than the maxImageWidth or maxImageHeight
+      // // option than we need to size down while maintaining the aspect ratio.
+      // if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {
+      //   if ((preloader.width / maxImageWidth) > (preloader.height / maxImageHeight)) {
+      //     imageWidth  = maxImageWidth;
+      //     imageHeight = parseInt(preloader.height / (preloader.width / imageWidth), 10);
+      //     $image.width(imageWidth);
+      //     $image.height(imageHeight);
+      //   } else {
+      //     imageHeight = maxImageHeight;
+      //     imageWidth = parseInt(preloader.width / (preloader.height / imageHeight), 10);
+      //     $image.width(imageWidth);
+      //     $image.height(imageHeight);
+      //   }
+      // }
 
-      // Is the current image's width or height is greater than the maxImageWidth or maxImageHeight
-      // option than we need to size down while maintaining the aspect ratio.
-      if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {
-        if ((preloader.width / maxImageWidth) > (preloader.height / maxImageHeight)) {
-          imageWidth  = maxImageWidth;
-          imageHeight = parseInt(preloader.height / (preloader.width / imageWidth), 10);
-          $image.width(imageWidth);
-          $image.height(imageHeight);
-        } else {
-          imageHeight = maxImageHeight;
-          imageWidth = parseInt(preloader.width / (preloader.height / imageHeight), 10);
-          $image.width(imageWidth);
-          $image.height(imageHeight);
-        }
-      }
-
-      size_container_width = $image.width();
-      size_container_height = $image.height();
-      console.log(`size container width: ${size_container_width}, size container height: ${size_container_height}`)
-      self.sizeContainer($image.width(), $image.height());
+      // size_container_width = $image.width();
+      // size_container_height = $image.height();
+      // self.sizeContainer($image.width(), $image.height());
     };
 
     // Preload image before showing
-    preloader.src = this.album[imageNumber].link;
-    this.currentImageIndex = imageNumber;
+    // preloader.src = this.album[imageNumber].link;
+    // this.currentImageIndex = imageNumber;
   };
 
   // Stretch overlay to fit the viewport
