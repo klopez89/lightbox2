@@ -623,7 +623,7 @@
   // Closing time. :-(
   Lightbox.prototype.end = function() {
     this.disableKeyboardNav();
-    // $(window).off('resize', this.sizeOverlay);
+    $(window).off('resize', this.sizeOverlay);
     this.$lightbox.fadeOut(this.options.fadeDuration);
     this.$overlay.fadeOut(this.options.fadeDuration);
 
