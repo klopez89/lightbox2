@@ -308,8 +308,13 @@
 
     this.changeImage(imageNumber);
 
-    let loader_height = self.$lightbox.find('.lb-loader').height();
-    console.log(`Loader_height after change image: ${loader_height}`);
+    setTimeout(function() {
+      let loader_height = self.$lightbox.find('.lb-loader').height();
+      console.log(`Loader_height after change image: ${loader_height}`);
+    }, 0);
+
+    // let loader_height = self.$lightbox.find('.lb-loader').height();
+    // console.log(`Loader_height after change image: ${loader_height}`);
     // var top_distance = self.topDistance();
     // console.log(`The top distance after change image is: `, this);
   };
