@@ -431,6 +431,8 @@
 
 
   Lightbox.prototype.topDistance = function() {
+    var self = this;
+    
     var window_height = window.innerHeight;
     var window_width = $(window).width();
     var scroll_offset  = $(window).scrollTop();
