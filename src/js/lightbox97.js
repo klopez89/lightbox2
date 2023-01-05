@@ -288,9 +288,9 @@
     }
 
     // Position Lightbox
-    let scroll_offset = $(window).scrollTop();
+    // let scroll_offset = $(window).scrollTop();
     this.$lightbox.css({
-      top: `calc(50% + ${scroll_offset}px)`,
+      top: `calc(50%)`,
       left: '50%',
       transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
