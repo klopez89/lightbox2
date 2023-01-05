@@ -289,7 +289,7 @@
     }
 
     // Position Lightbox
-    window_innerHeight = $(window).innerHeight;
+    window_innerHeight = window.innerHeight;
     var top  = $window.scrollTop() + (window_innerHeight - 250) /2;//this.options.positionFromTop;
     var left = $window.scrollLeft();
     this.$lightbox.css({
