@@ -300,7 +300,7 @@
 
     // var top  = $window.scrollTop() + (window_innerHeight - 520)/2; //this.options.positionFromTop;
     // var left = $window.scrollLeft();
-    console.log('scroll left va: ', left);
+    // console.log('scroll left va: ', left);
     this.$lightbox.css({
       top: `calc(50% + ${scroll_offset}px)`,
       left: '50%',
