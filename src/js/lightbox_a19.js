@@ -530,8 +530,9 @@
 
     if (typeof this.album[this.currentImageIndex].like_button_func !== 'undefined' &&
       this.album[this.currentImageIndex].like_button_func !== '') {
-      var $likebutton = this.$lightbox.find('#lbLikeButton');
-      $likebutton.onclick = this.album[this.currentImageIndex].like_button_func;
+      var $likebutton = this.$lightbox.find('#lbLikeButton')[0];
+      $likebutton.setAttribute('onclick', this.album[this.currentImageIndex].like_button_func);
+      $likebutton.setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
       $likebutton.fadeIn('fast');
     }
 
