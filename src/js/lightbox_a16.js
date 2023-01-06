@@ -129,6 +129,17 @@
                 <span class="lb-caption"></span>
                 <span class="lb-number"></span>
               </div>
+              <div class="lb-button-menu">
+                <div class="button-container">
+                  <button class="lb-button"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
+                  <button class="lb-button"><i class="fa fa-heart lb-favorite-button selected"></i></button>
+                  <button class="lb-button"><i class="fa fa-flag lb-flag-button selected"></i></button>
+                </div>
+                <div class="right-button-container">
+                  <button class="lb-button"><i class="fa fa-download lb-download-button"></i></button>
+                  <button class="lb-button"><i class="fa fa-share lb-share-button"></i></button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="lb-outerContainer">
