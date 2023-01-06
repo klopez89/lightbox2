@@ -132,12 +132,12 @@
               <div class="lb-button-menu">
                 <div class="button-container">
                   <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
-                  <button class="lb-button"><i class="fa fa-heart lb-favorite-button selected"></i></button>
-                  <button class="lb-button"><i class="fa fa-flag lb-flag-button selected"></i></button>
+                  <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button selected"></i></button>
+                  <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button selected"></i></button>
                 </div>
                 <div class="right-button-container">
-                  <button class="lb-button"><i class="fa fa-download lb-download-button"></i></button>
-                  <button class="lb-button"><i class="fa fa-share lb-share-button"></i></button>
+                  <button class="lb-button" id="lbDownloadButton"><i class="fa fa-download lb-download-button"></i></button>
+                  <button class="lb-button" id="lbShareButton"><i class="fa fa-share lb-share-button"></i></button>
                 </div>
               </div>
             </div>
@@ -268,7 +268,11 @@
         title: $link.attr('data-title') || $link.attr('title'),
         prompt: $link.attr('data-prompt'),
         prompt_id: $link.attr('data-prompt-id'),
-        like_button_func: $link.attr('data-like-func')
+        like_btn_func: $link.attr('data-like-func'),
+        fav_btn_func: $link.attr('data-fav-func'),
+        flag_btn_func: $link.attr('data-flag-func'),
+        downl_btn_func: $link.attr('data-download-func'),
+        share_btn_func: $link.attr('data-share-func')
       });
     }
 
@@ -449,16 +453,6 @@
       self.$lightbox.find('.lb-next').height(newHeight);
       self.$lightbox.find('.lb-nav').height(newHeight);
 
-
-      // Adjust the center point of the lightbox vertically now that the text content has been laid
-
-
-
-
-
-      // var scroll_offset  = $(window).scrollTop();
-      // self.$lightbox.css('top', `calc(50vh - env(safe-area-inset-bottom)`);
-
       // Set focus on one of the two root nodes so keyboard events are captured.
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
 
@@ -528,14 +522,6 @@
   Lightbox.prototype.updateDetails = function() {
     var self = this;
 
-    if (typeof this.album[this.currentImageIndex].like_button_func !== 'undefined' &&
-      this.album[this.currentImageIndex].like_button_func !== '') {
-      var $likebutton = this.$lightbox.find('#lbLikeButton');
-      $likebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].like_button_func);
-      $likebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
-      $likebutton.fadeIn('fast');
-    }
-
     if (typeof this.album[this.currentImageIndex].prompt !== 'undefined' &&
       this.album[this.currentImageIndex].prompt !== '') {
       var $caption = this.$lightbox.find('.lb-prompt');
@@ -572,6 +558,51 @@
     this.$lightbox.find('.lb-dataContainer').fadeIn(this.options.resizeDuration, function() {
       return self.sizeOverlay();
     });
+
+    // Configure social and share buttons
+      // Like
+    if (typeof this.album[this.currentImageIndex].like_btn_func !== 'undefined' &&
+      this.album[this.currentImageIndex].like_btn_func !== '') {
+      var $likebutton = this.$lightbox.find('#lbLikeButton');
+      $likebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].like_btn_func);
+      $likebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+      $likebutton.fadeIn('fast');
+    }
+
+      // Favorite
+    if (typeof this.album[this.currentImageIndex].fav_btn_func !== 'undefined' &&
+      this.album[this.currentImageIndex].fav_btn_func !== '') {
+      var $favbutton = this.$lightbox.find('#lbFavButton');
+      $favbutton[0].setAttribute('onclick', this.album[this.currentImageIndex].fav_btn_func);
+      $favbutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+      $favbutton.fadeIn('fast');
+    }
+      // Flag
+    if (typeof this.album[this.currentImageIndex].flag_btn_func !== 'undefined' &&
+      this.album[this.currentImageIndex].flag_btn_func !== '') {
+      var $flagbutton = this.$lightbox.find('#lbFlagButton');
+      $flagbutton[0].setAttribute('onclick', this.album[this.currentImageIndex].flag_btn_func);
+      $flagbutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+      $flagbutton.fadeIn('fast');
+    }
+
+    // Download
+    if (typeof this.album[this.currentImageIndex].downl_btn_func !== 'undefined' &&
+      this.album[this.currentImageIndex].downl_btn_func !== '') {
+      var $downlbutton = this.$lightbox.find('#lbDownloadButton');
+      $downlbutton[0].setAttribute('onclick', this.album[this.currentImageIndex].downl_btn_func);
+      $downlbutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+      $downlbutton.fadeIn('fast');
+    }
+
+    // Share
+    if (typeof this.album[this.currentImageIndex].share_btn_func !== 'undefined' &&
+      this.album[this.currentImageIndex].share_btn_func !== '') {
+      var $sharebutton = this.$lightbox.find('#lbShareButton');
+      $sharebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].share_btn_func);
+      $sharebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+      $sharebutton.fadeIn('fast');
+    }
   };
 
   // Preload previous and next images in set.
