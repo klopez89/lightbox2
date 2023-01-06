@@ -143,6 +143,11 @@
             </div>
           </div>
           <div class="lb-outerContainer">
+            <div class="lb-data" style="position: absolute; right: 0; top: -40px; padding: 0;">
+              <div class="lb-closeContainer">
+                <a class="lb-close"></a>
+              </div>
+            </div>
             <div class="lb-container">
               <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
               <div class="lb-loader">
