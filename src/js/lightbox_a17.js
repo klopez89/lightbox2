@@ -131,7 +131,7 @@
               </div>
               <div class="lb-button-menu">
                 <div class="button-container">
-                  <button class="lb-button"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
+                  <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
                   <button class="lb-button"><i class="fa fa-heart lb-favorite-button selected"></i></button>
                   <button class="lb-button"><i class="fa fa-flag lb-flag-button selected"></i></button>
                 </div>
@@ -266,7 +266,9 @@
         alt: $link.attr('data-alt'),
         link: $link.attr('href'),
         title: $link.attr('data-title') || $link.attr('title'),
-        prompt: $link.attr('data-prompt')
+        prompt: $link.attr('data-prompt'),
+        prompt_id: $link.attr('data-prompt-id'),
+        like_button_func: $link.attr('data-like-func')
       });
     }
 
@@ -525,6 +527,15 @@
   // Display caption, image number, and closing button.
   Lightbox.prototype.updateDetails = function() {
     var self = this;
+
+    like_button_func
+
+    if (typeof this.album[this.currentImageIndex].like_button_func !== 'undefined' &&
+      this.album[this.currentImageIndex].like_button_func !== '') {
+      var $likebutton = this.$lightbox.find('#lbLikeButton');
+      $likebutton.onclick = this.album[this.currentImageIndex].like_button_func;
+      $likebutton.fadeIn('fast');
+    }
 
     if (typeof this.album[this.currentImageIndex].prompt !== 'undefined' &&
       this.album[this.currentImageIndex].prompt !== '') {
