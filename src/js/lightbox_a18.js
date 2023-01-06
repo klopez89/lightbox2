@@ -528,8 +528,6 @@
   Lightbox.prototype.updateDetails = function() {
     var self = this;
 
-    like_button_func
-
     if (typeof this.album[this.currentImageIndex].like_button_func !== 'undefined' &&
       this.album[this.currentImageIndex].like_button_func !== '') {
       var $likebutton = this.$lightbox.find('#lbLikeButton');
