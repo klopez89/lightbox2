@@ -121,11 +121,12 @@
         <div class="lightbox-container">
           <div class="lb-close-alt"><button class="lb-dismiss">Dismiss</button></div>
           <div class="lb-dataContainer">
-            <div class="back">
+            <div class="hidden-details">
               <p>This text is hidden behind the front div, but will slide up when the button is pressed.</p>
             </div>
             <div class="lb-data">
               <div class="lb-details">
+                <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                 <span class="lb-prompt"></span>
                 <span class="lb-caption"></span>
                 <span class="lb-number"></span>
@@ -252,6 +253,13 @@
     this.$lightbox.find('.lb-loader, .lb-close').on('click', function() {
       self.end();
       return false;
+    });
+
+    const toggleButton = document.getElementById('toggleHiddenButton');
+    const child = document.querySelector('.hidden-details');
+
+    toggleButton.addEventListener('click', () => {
+      child.classList.toggle('open');
     });
   };
 
