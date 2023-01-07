@@ -170,6 +170,7 @@ body.lb-disable-scrolling {
   display: flex;
   z-index: 4;
   position: relative;
+  background-color: black;
 }
 
 .lb-data .lb-details {
