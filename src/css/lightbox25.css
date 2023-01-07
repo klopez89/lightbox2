@@ -171,8 +171,8 @@ body.lb-disable-scrolling {
   float: left;
   text-align: left;
   line-height: 1.1em;
-  margin-left: 25px;
-  margin-top: 50px;
+  margin-left: 15px;
+  padding-right: 20px;
 }
 
 .lb-data .lb-prompt {
