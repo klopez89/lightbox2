@@ -147,7 +147,7 @@ body.lb-disable-scrolling {
 .lb-dataContainer {
   display: inline-block;
   margin: 0 auto;
-  padding: 15px;
+/*  padding: 15px;*/
   *zoom: 1;
   width: 100%;
   border-bottom-left-radius: 4px;
@@ -163,11 +163,13 @@ body.lb-disable-scrolling {
 }
 
 .lb-data {
-  padding: 0 0;
+  padding: 15px;
   color: #ccc;
   flex-direction: column;
   height: 100%;
   display: flex;
+  z-index: 4;
+  position: relative;
 }
 
 .lb-data .lb-details {
@@ -403,7 +405,7 @@ body.lb-disable-scrolling {
     font-size: 1rem;
     line-height: 1rem;
     left: 0;
-    z-index: 21;
+    z-index: 3;
 }
 
 .lb-dataContainer:hover .hidden-details {
