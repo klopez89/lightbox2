@@ -162,8 +162,10 @@ body.lb-disable-scrolling {
 }
 
 .lb-data {
-  padding: 0 4px;
+  padding: 0 0;
   color: #ccc;
+  flex-direction: column;
+  height: 100%;
 }
 
 .lb-data .lb-details {
@@ -339,8 +341,8 @@ body.lb-disable-scrolling {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding-top: 10px;
+  margin-left: 15px;
 }
 
 .button-container {
@@ -380,48 +382,6 @@ body.lb-disable-scrolling {
 
 .lb-button:active .lb-share-button {
   background-color:  rgba(255, 255, 255, 0.4) ; 
-}
-
-
-/* Media Queries */
-
-@media screen and (max-width: 1200px) {
-  .lightbox-container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .lb-data .lb-prompt {
-    font-size: 0.95rem;
-    line-height: 1rem;
-  }
-
-  .lb-data .lb-caption {
-    font-size: 0.8rem;
-    line-height: 0.8rem;
-  }
-
-  .lb-data .lb-details {
-    margin-top: 0px;
-    margin-left: 0px; 
-  }
-
-  .lb-data .lb-close {
-    float: right;
-  }
-
-  .lb-nav {
-/*    height: 520px;*/
-    z-index: 21;
-  }
-
-  .lb-nav a.lb-prev {
-    width: 35%;
-  }
-
-    .lb-nav a.lb-next {
-    width: 35%;
-  }
 }
 
 
