@@ -121,6 +121,9 @@
         <div class="lightbox-container">
           <div class="lb-close-alt"><button class="lb-dismiss">Dismiss</button></div>
           <div class="lb-dataContainer">
+            <div class="back">
+              <p>This text is hidden behind the front div, but will slide up when the button is pressed.</p>
+            </div>
             <div class="lb-data">
               <div class="lb-details">
                 <span class="lb-prompt"></span>
