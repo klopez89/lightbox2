@@ -249,6 +249,19 @@ body.lb-disable-scrolling {
 }
 
 
+.lb-close-alt {
+    /* display: inline-flex; */
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
 
 /* Social and share buttons */
 

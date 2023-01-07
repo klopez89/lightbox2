@@ -119,6 +119,7 @@
           <a class="lb-next" aria-label="Next image" href="" ></a>
         </div>
         <div class="lightbox-container">
+          <div class="lb-close-alt">Dismiss</div>
           <div class="lb-dataContainer">
             <div class="lb-data">
               <div class="lb-details">
