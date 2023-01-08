@@ -124,22 +124,24 @@
             <div class="hidden-details">
               <p>This text is hidden behind the front div, but will slide up when the button is pressed.</p>
             </div>
-            <div class="lb-data">
-              <div class="lb-details">
-                <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
-                <span class="lb-prompt"></span>
-                <span class="lb-caption"></span>
-                <span class="lb-number"></span>
-              </div>
-              <div class="lb-button-menu">
-                <div class="button-container">
-                  <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
-                  <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button selected"></i></button>
-                  <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button selected"></i></button>
+            <div style="lb-data-background">
+              <div class="lb-data">
+                <div class="lb-details">
+                  <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
+                  <span class="lb-prompt"></span>
+                  <span class="lb-caption"></span>
+                  <span class="lb-number"></span>
                 </div>
-                <div class="right-button-container">
-                  <button class="lb-button" id="lbDownloadButton"><i class="fa fa-download lb-download-button"></i></button>
-                  <button class="lb-button" id="lbShareButton"><i class="fa fa-share lb-share-button"></i></button>
+                <div class="lb-button-menu">
+                  <div class="button-container">
+                    <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
+                    <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button selected"></i></button>
+                    <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button selected"></i></button>
+                  </div>
+                  <div class="right-button-container">
+                    <button class="lb-button" id="lbDownloadButton"><i class="fa fa-download lb-download-button"></i></button>
+                    <button class="lb-button" id="lbShareButton"><i class="fa fa-share lb-share-button"></i></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,7 +265,7 @@
       child.classList.toggle('open');
 
 
-
+      console.log(`Child class list: ${child.classList}`);
       if (child.classList.contains('open')) {
         const childHeight = child.offsetHeight;
         child.style.top = `-${childHeight}px`;

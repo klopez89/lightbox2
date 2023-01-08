@@ -400,12 +400,17 @@ body.lb-disable-scrolling {
     top: 0px;
     width: 100%;
     background: blue;
-    opacity: 0;
     color: white;
     font-size: 1rem;
     line-height: 1rem;
     left: 0;
     z-index: 3;
+}
+
+.lb-data-background {
+  background-color: black;
+  position: relative;
+  z-index: 5;
 }
 
 /*.lb-dataContainer:hover .hidden-details {
