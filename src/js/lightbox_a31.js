@@ -261,9 +261,12 @@
     toggleButton.addEventListener('click', () => {
       console.log('toggle details button was pressed!');
       child.classList.toggle('open');
+
+
+
       if (child.classList.contains('open')) {
         const childHeight = child.offsetHeight;
-        child.style.top = `${childHeight}px`;
+        child.style.top = `-${childHeight}px`;
       } else {
         child.style.top = '0px';
       }
