@@ -260,6 +260,12 @@
 
     toggleButton.addEventListener('click', () => {
       child.classList.toggle('open');
+      if (child.classList.contains('open')) {
+        const childHeight = child.offsetHeight;
+        child.style.top = `${childHeight}px`;
+      } else {
+        child.style.top = '0px';
+      }
     });
   };
 
