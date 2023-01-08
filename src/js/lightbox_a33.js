@@ -122,7 +122,12 @@
           <div class="lb-close-alt"><button class="lb-dismiss">Dismiss</button></div>
           <div class="lb-dataContainer">
             <div class="hidden-details">
-              <p>This text is hidden behind the front div, but will slide up when the button is pressed.</p>
+              <div class="lb-data">
+                <div class="lb-details">
+                    <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
+                    <span class="lb-caption"></span>
+                </div>
+              </div>
             </div>
             <div style="lb-data-background">
               <div class="lb-data">
