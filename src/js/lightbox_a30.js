@@ -259,6 +259,7 @@
     const child = document.querySelector('.hidden-details');
 
     toggleButton.addEventListener('click', () => {
+      console.log('toggle details button was pressed!');
       child.classList.toggle('open');
       if (child.classList.contains('open')) {
         const childHeight = child.offsetHeight;
