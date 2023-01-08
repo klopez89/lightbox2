@@ -124,12 +124,11 @@
             <div class="hidden-details">
               <div class="lb-data">
                 <div class="lb-details">
-                    <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                     <span class="lb-caption"></span>
                 </div>
               </div>
             </div>
-            <div style="lb-data-background">
+            <div class="lb-data-background">
               <div class="lb-data">
                 <div class="lb-details">
                   <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
