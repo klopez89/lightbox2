@@ -585,7 +585,9 @@
       } else {
         $details.html(this.album[this.currentImageIndex].hidden_details);
       }
-      $details.fadeIn('fast');
+      $details.fadeIn('fast', function() {
+        $(this).css('display','');
+      });
     }
 
     if (this.album.length > 1 && this.options.showImageNumberLabel) {
