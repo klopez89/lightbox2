@@ -571,7 +571,10 @@
       const maxHeight = parseInt($prompt.css('max-height'), 10);
       var $promptContainer = this.$lightbox.find('.lb-prompt-container');
 
-      if ($prompt.prop('scrollHeight') > maxHeight) {
+      const scrollHeight = $prompt.prop('scrollHeight');
+      console.log(`the scroll height: ${scrollHeight}, and max height: ${maxHeight}`);
+
+      if (scrollHeight > maxHeight) {
         console.log(`class list for prompt container before adding, ${$promptContainer.attr('class')}`);
         $promptContainer.addClass('showing');
         console.log(`class list for prompt container after adding, ${$promptContainer.attr('class')}`);
