@@ -576,7 +576,7 @@
         $scrollhint.css('display: none');
       }
 
-      $caption.fadeIn('fast');
+      $prompt.fadeIn('fast');
     }
 
     // Enable anchor clicks in the injected caption html.
