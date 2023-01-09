@@ -264,11 +264,8 @@
     const child = document.querySelector('.hidden-details');
 
     toggleButton.addEventListener('click', () => {
-      console.log('toggle details button was pressed!');
       child.classList.toggle('open');
 
-
-      console.log(`Child class list: ${child.classList}`);
       if (child.classList.contains('open')) {
         const childHeight = child.offsetHeight;
         child.style.top = `-${childHeight}px`;
@@ -277,6 +274,12 @@
         child.style.top = '0px';
         toggleButton.innerHTML = 'Show Prompt Details'
       }
+    });
+
+    // Configure alt dismiss button
+    const dismissButton = document.querySelector('.lb-dismiss');
+    dismissButton.addEventListener('click', () => {
+      this.end();
     });
   };
 
