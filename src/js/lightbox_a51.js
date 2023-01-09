@@ -365,7 +365,9 @@
     // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
     $('.lb-loader').fadeIn('slow');
-    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption, .lb-prompt').animate({opacity: '0%'}, 'fast', 'linear')
+    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-prompt').hide();
+    this.$lightbox.find('.lb-caption').animate({opacity: '100%'}, 'fast', 'linear');
+
     this.$outerContainer.addClass('animating');
 
     // When image to show is preloaded, we send the width and height to sizeContainer()
