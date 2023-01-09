@@ -182,6 +182,8 @@ body.lb-disable-scrolling {
     font-size: 1.5rem;
     line-height: 1.8rem;
     color: white;
+    max-height: 250px;
+    overflow-y: scroll;
 }
 
 .lb-data .lb-prompt a {
@@ -397,6 +399,26 @@ body.lb-disable-scrolling {
     height: 100%;
 }
 
+    .lb-prompt-container {
+      position: relative; 
+    }    
+
+  .lb-prompt-container::after {
+      content: "";
+      position: absolute; 
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 30px;  /* Set the height of the ::after pseudo-element to 10px */
+      background: linear-gradient(to bottom, transparent 0%, black 100%);  /* Set the gradient background */
+      pointer-events: none;
+      display: none;
+    }
+
+    .lb-prompt-container.showing::after {
+      display: block;
+    }
 
 /* Media Queries */
 
@@ -420,23 +442,9 @@ body.lb-disable-scrolling {
     position: relative; 
   }
 
-    .lb-prompt-container {
-      position: relative; 
-    }
-    
-  .lb-prompt-container::after {
-      content: "";
-      position: absolute; 
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 30px;  /* Set the height of the ::after pseudo-element to 10px */
-      background: linear-gradient(to bottom, transparent 0%, black 100%);  /* Set the gradient background */
-      pointer-events: none;
-      display: none;
-    }
 
+
+    
 
   .lb-data .lb-caption {
     font-size: 0.8rem;
@@ -524,6 +532,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
