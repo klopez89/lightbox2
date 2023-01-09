@@ -420,7 +420,24 @@ body.lb-disable-scrolling {
     margin-bottom: 15px;
     max-height: 100px;
     overflow-y: scroll;
+    position: relative; 
   }
+
+    .lb-prompt-container {
+      position: relative; 
+    }
+    
+  .lb-prompt-container::after {
+      content: "";
+      position: absolute; 
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 30px;  /* Set the height of the ::after pseudo-element to 10px */
+      background: linear-gradient(to bottom, transparent 0%, black 100%);  /* Set the gradient background */
+      pointer-events: none;
+    }
 
 
   .lb-data .lb-caption {
@@ -509,6 +526,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 

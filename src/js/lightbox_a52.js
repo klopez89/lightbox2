@@ -131,7 +131,10 @@
             <div class="lb-data-background">
               <div class="lb-data">
                 <div class="lb-data-details">
-                  <span class="lb-prompt"></span>
+                  <div class="lb-prompt-container">
+                    <span class="lb-prompt"></span>
+                    <div class="scroll-hint"></div>
+                  </div>
                   <button class="toggle-hidden-button" id="toggleHiddenButton">Show Prompt Details</button>
                   <div class="lb-caption in-main-data"></div>
                   <span class="lb-number"></span>
