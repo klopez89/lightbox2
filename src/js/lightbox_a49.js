@@ -585,8 +585,12 @@
       } else {
         $details.html(this.album[this.currentImageIndex].hidden_details);
       }
-      $details.fadeIn('fast', function() {
-        $(this).css('display','');
+      // $details.fadeIn('fast', function() {
+      //   $(this).css('display','');
+      // });
+
+      $details.animate({opacity: '100%'}, 'fast', 'linear', function() {
+        
       });
     }
 
