@@ -131,9 +131,9 @@
             <div class="lb-data-background">
               <div class="lb-data">
                 <div class="lb-details">
-                  <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                   <span class="lb-prompt"></span>
-                  <span class="lb-caption"></span>
+                  <button class="toggle-hidden-button" id="toggleHiddenButton">Show Prompt Details</button>
+                  <span class="lb-timestamp"></span>
                   <span class="lb-number"></span>
                 </div>
                 <div class="lb-button-menu">
@@ -296,6 +296,7 @@
         alt: $link.attr('data-alt'),
         link: $link.attr('href'),
         title: $link.attr('data-title') || $link.attr('title'),
+        hidden_details: $link.attr('data-hidden-details'),
         prompt: $link.attr('data-prompt'),
         prompt_id: $link.attr('data-prompt-id'),
         like_btn_func: $link.attr('data-like-func'),
@@ -567,13 +568,24 @@
     // Thanks Nate Wright for the fix. @https://github.com/NateWr
     if (typeof this.album[this.currentImageIndex].title !== 'undefined' &&
       this.album[this.currentImageIndex].title !== '') {
-      var $caption = this.$lightbox.find('.lb-caption');
+      var $timestamp = this.$lightbox.find('.lb-timestamp');
       if (this.options.sanitizeTitle) {
-        $caption.text(this.album[this.currentImageIndex].title);
+        $timestamp.text(this.album[this.currentImageIndex].title);
       } else {
-        $caption.html(this.album[this.currentImageIndex].title);
+        $timestamp.html(this.album[this.currentImageIndex].title);
       }
-      $caption.fadeIn('fast');
+      $timestamp.fadeIn('fast');
+    }
+
+    if (typeof this.album[this.currentImageIndex].title !== 'undefined' &&
+      this.album[this.currentImageIndex].title !== '') {
+      var $details = this.$lightbox.find('.lb-details');
+      if (this.options.sanitizeTitle) {
+        $details.text(this.album[this.currentImageIndex].hidden_details);
+      } else {
+        $details.html(this.album[this.currentImageIndex].hidden_details);
+      }
+      $details.fadeIn('fast');
     }
 
     if (this.album.length > 1 && this.options.showImageNumberLabel) {
