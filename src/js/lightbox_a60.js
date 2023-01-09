@@ -569,12 +569,12 @@
 
       // Configure the scroll hint visibility based on whether prompt height exceeded its max
       const maxHeight = parseInt($prompt.css('max-height'), 10);
-      var $scrollhint = this.$lightbox.find('.lb-prompt-container:after');
+      var $scrollhint = this.$lightbox.find('.lb-prompt-container');
 
       if ($prompt.prop('scrollHeight') > maxHeight) {
-        $scrollhint.css('display: block');
+        $scrollhint.addClass('showing');
       } else {
-        $scrollhint.css('display: none');
+        $scrollhint.removeClass('showing');
       }
 
       $prompt.fadeIn('fast');
