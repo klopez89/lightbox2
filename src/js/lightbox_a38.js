@@ -131,9 +131,9 @@
             <div class="lb-data-background">
               <div class="lb-data">
                 <div class="lb-details">
+                  <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                   <span class="lb-prompt"></span>
-                  <button class="toggle-hidden-button" id="toggleHiddenButton">Show Prompt Details</button>
-                  <span class="lb-timestamp"></span>
+                  <span class="lb-caption"></span>
                   <span class="lb-number"></span>
                 </div>
                 <div class="lb-button-menu">
