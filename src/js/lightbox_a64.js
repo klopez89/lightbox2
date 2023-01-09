@@ -493,6 +493,25 @@
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
 
       self.showImage();
+
+      // Configure the scroll hint visibility based on whether prompt height exceeded its max
+      var $prompt = this.$lightbox.find('.lb-prompt');
+      const maxHeight = parseInt($prompt.css('max-height'), 10);
+      var $promptContainer = this.$lightbox.find('.lb-prompt-container');
+
+      const scrollHeight = $prompt.prop('scrollHeight');
+      console.log(`the scroll height: ${scrollHeight}, and max height: ${maxHeight}`);
+
+      if (scrollHeight > maxHeight) {
+        console.log(`class list for prompt container before adding, ${$promptContainer.attr('class')}`);
+        $promptContainer.addClass('showing');
+        console.log(`class list for prompt container after adding, ${$promptContainer.attr('class')}`);
+      } else {
+        console.log(`class list for prompt container before removing, ${$promptContainer.attr('class')}`);
+        $promptContainer.removeClass('showing');
+        console.log(`class list for prompt container after removing, ${$promptContainer.attr('class')}`);
+      }
+
     }
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {
@@ -566,24 +585,6 @@
       } else {
         $prompt.html(this.album[this.currentImageIndex].prompt);
       }
-
-      // Configure the scroll hint visibility based on whether prompt height exceeded its max
-      const maxHeight = parseInt($prompt.css('max-height'), 10);
-      var $promptContainer = this.$lightbox.find('.lb-prompt-container');
-
-      const scrollHeight = $prompt.prop('scrollHeight');
-      console.log(`the scroll height: ${scrollHeight}, and max height: ${maxHeight}`);
-
-      if (scrollHeight > maxHeight) {
-        console.log(`class list for prompt container before adding, ${$promptContainer.attr('class')}`);
-        $promptContainer.addClass('showing');
-        console.log(`class list for prompt container after adding, ${$promptContainer.attr('class')}`);
-      } else {
-        console.log(`class list for prompt container before removing, ${$promptContainer.attr('class')}`);
-        $promptContainer.removeClass('showing');
-        console.log(`class list for prompt container after removing, ${$promptContainer.attr('class')}`);
-      }
-
       $prompt.fadeIn('fast');
     }
 
