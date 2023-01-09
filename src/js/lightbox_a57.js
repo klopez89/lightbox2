@@ -571,6 +571,9 @@
       const maxHeight = $prompt.css('max-height');
       var $scrollhint = this.$lightbox.find('.lb-prompt-container:after');
 
+      const promptHeight = $prompt.height();
+      console.log(`prompt height: ${promptHeight}, amnd max height: ${maxHeight}`);
+
       if ($prompt.height() >= maxHeight) {
         $scrollhint.css('display: block');
       } else {
