@@ -133,6 +133,7 @@
                 <div class="lb-data-details">
                   <span class="lb-prompt"></span>
                   <button class="toggle-hidden-button" id="toggleHiddenButton">Show Prompt Details</button>
+                  <div class="lb-caption in-main-data"></div>
                   <span class="lb-number"></span>
                 </div>
                 <div class="lb-button-menu">
@@ -150,11 +151,6 @@
             </div>
           </div>
           <div class="lb-outerContainer">
-            <div class="lb-data" style="position: absolute; right: 0; top: -40px; padding: 0;">
-              <div class="lb-closeContainer">
-                <a class="lb-close"></a>
-              </div>
-            </div>
             <div class="lb-container">
               <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
               <div class="lb-loader">
@@ -255,7 +251,7 @@
     });
 
 
-    this.$lightbox.find('.lb-loader, .lb-close').on('click', function() {
+    this.$lightbox.find('.lb-loader, .lb-close-alt').on('click', function() {
       self.end();
       return false;
     });
