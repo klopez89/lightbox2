@@ -172,17 +172,14 @@ body.lb-disable-scrolling {
     float: left;
     text-align: left;
     line-height: 1.1em;
-    /* padding-left: 20px; */
-    /* padding-right: 20px; */
+
     flex: 1;
 }
 
 .lb-data .lb-prompt {
     display: block;
     margin-bottom: 30px;
-    /* margin-top: 5px; */
     font-size: 1.5rem;
-    font-weight: bold;
     line-height: 1.8rem;
     color: white;
 }
@@ -197,7 +194,7 @@ body.lb-disable-scrolling {
 }
 
 .prompt-detail-copy-link {
-  font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .prompt-timestamp {
@@ -527,6 +524,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
