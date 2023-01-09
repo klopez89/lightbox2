@@ -560,12 +560,22 @@
 
     if (typeof this.album[this.currentImageIndex].prompt !== 'undefined' &&
       this.album[this.currentImageIndex].prompt !== '') {
-      var $caption = this.$lightbox.find('.lb-prompt');
+      var $prompt = this.$lightbox.find('.lb-prompt');
       if (this.options.sanitizeTitle) {
-        $caption.text(this.album[this.currentImageIndex].prompt);
+        $prompt.text(this.album[this.currentImageIndex].prompt);
       } else {
-        $caption.html(this.album[this.currentImageIndex].prompt);
+        $prompt.html(this.album[this.currentImageIndex].prompt);
       }
+
+      // Configure the scroll hint visibility based on whether prompt height exceeded its max
+      const maxHeight = $prompt.css('max-height');
+      var $scrollhint = this.$lightbox.find('.scroll-hint');
+      if ($prompt.height() >= maxHeight) {
+        $scrollhint.css('display: block');
+      } else {
+        $scrollhint.css('display: none');
+      }
+
       $caption.fadeIn('fast');
     }
 

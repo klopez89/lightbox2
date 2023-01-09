@@ -437,6 +437,7 @@ body.lb-disable-scrolling {
       height: 30px;  /* Set the height of the ::after pseudo-element to 10px */
       background: linear-gradient(to bottom, transparent 0%, black 100%);  /* Set the gradient background */
       pointer-events: none;
+      display: none;
     }
 
 
