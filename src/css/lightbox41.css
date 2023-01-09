@@ -390,6 +390,8 @@ body.lb-disable-scrolling {
 
 .toggle-hidden-button {
   background-color: transparent;
+  color: cornflowerblue;
+  font-size: 0.8rem;
 }
 
 .hidden-details {
@@ -411,6 +413,7 @@ body.lb-disable-scrolling {
   background-color: black;
   position: relative;
   z-index: 5;
+  height: 100%;
 }
 
 /* Media Queries */
