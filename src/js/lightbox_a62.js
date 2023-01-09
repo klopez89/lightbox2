@@ -572,9 +572,13 @@
       var $promptContainer = this.$lightbox.find('.lb-prompt-container');
 
       if ($prompt.prop('scrollHeight') > maxHeight) {
+        console.log(`class list for prompt container before adding, ${$promptContainer.attr('class')}`);
         $promptContainer.addClass('showing');
+        console.log(`class list for prompt container after adding, ${$promptContainer.attr('class')}`);
       } else {
+        console.log(`class list for prompt container before removing, ${$promptContainer.attr('class')}`);
         $promptContainer.removeClass('showing');
+        console.log(`class list for prompt container after removing, ${$promptContainer.attr('class')}`);
       }
 
       $prompt.fadeIn('fast');
