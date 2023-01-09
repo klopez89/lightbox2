@@ -418,7 +418,10 @@ body.lb-disable-scrolling {
     font-size: 1rem;
     line-height: 1.3rem;
     margin-bottom: 15px;
+    max-height: 100px;
+    overflow-y: scroll;
   }
+
 
   .lb-data .lb-caption {
     font-size: 0.8rem;
@@ -506,6 +509,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
