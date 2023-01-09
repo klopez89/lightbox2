@@ -130,10 +130,9 @@
             </div>
             <div class="lb-data-background">
               <div class="lb-data">
-                <div class="lb-details">
+                <div class="lb-data-details">
                   <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                   <span class="lb-prompt"></span>
-                  <span class="lb-caption"></span>
                   <span class="lb-number"></span>
                 </div>
                 <div class="lb-button-menu">
@@ -579,7 +578,7 @@
 
     if (typeof this.album[this.currentImageIndex].title !== 'undefined' &&
       this.album[this.currentImageIndex].title !== '') {
-      var $details = this.$lightbox.find('.lb-details');
+      var $details = this.$lightbox.find('.lb-caption');
       if (this.options.sanitizeTitle) {
         $details.text(this.album[this.currentImageIndex].hidden_details);
       } else {

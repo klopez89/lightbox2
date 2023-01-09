@@ -170,7 +170,7 @@ body.lb-disable-scrolling {
   display: flex;
 }
 
-.lb-data .lb-details {
+.lb-data .lb-data-details {
   width: 100%;
   float: left;
   text-align: left;
@@ -430,7 +430,7 @@ body.lb-disable-scrolling {
     line-height: 1.2rem;
   }
 
-  .lb-data .lb-details {
+  .lb-data .lb-data-details {
     margin-top: 0px;
     margin-left: 5px; 
   }
