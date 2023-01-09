@@ -111,7 +111,7 @@ body.lb-disable-scrolling {
     float: left;
     background: url(../images/prev.png) left 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0.8;
+    opacity: 0;
     -webkit-transition: opacity 0.6s;
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
@@ -129,7 +129,7 @@ body.lb-disable-scrolling {
     float: right;
     background: url(../images/next.png) right 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0.8;
+    opacity: 0;
     -webkit-transition: opacity 0.6s;
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
@@ -223,7 +223,6 @@ body.lb-disable-scrolling {
 .lb-data .lb-number {
   display: block;
   clear: left;
-/*   padding-bottom: 1em; */
   font-size: 12px;
   color: #999999;
   margin-top: 5px;
@@ -273,7 +272,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-like-button {
-  font-size: 1.2rem; 
+/*   font-size: 1.2rem;  */
   color: #ffffff; 
   background-color: rgba(255, 255, 255, 0.4); 
   padding: 10px; 
@@ -291,7 +290,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-flag-button {
-  font-size: 1.2rem; 
+/*   font-size: 1.2rem;  */
   color: #ffffff; 
   background-color: rgba(255, 255, 255, 0.4); 
   padding: 10px; 
@@ -309,7 +308,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-favorite-button {
-  font-size: 1.2rem; 
+/*   font-size: 1.2rem;  */
   color: #ffffff; 
   background-color: rgba(255, 255, 255, 0.4); 
   padding: 10px; 
@@ -330,16 +329,13 @@ body.lb-disable-scrolling {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-top: 10px; */
-    /* margin-left: 15px; */
-    /* margin-bottom: 10px; */
 }
 
 .button-container {
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     float: left;
 }
 
@@ -348,7 +344,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-download-button {
-  font-size: 1.2rem; 
+/*   font-size: 1.2rem;  */
   color: #ffffff; 
   background-color: rgba(255, 255, 255, 0.0); 
   padding: 10px; 
@@ -361,7 +357,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-share-button {
-  font-size: 1.2rem; 
+/*   font-size: 1.2rem;  */
   color: #ffffff; 
   background-color: rgba(255, 255, 255, 0.0); 
   padding: 10px; 
@@ -421,6 +417,7 @@ body.lb-disable-scrolling {
   .lb-data .lb-prompt {
     font-size: 1rem;
     line-height: 1.3rem;
+    margin-bottom: 15px;
   }
 
   .lb-data .lb-caption {
@@ -486,6 +483,14 @@ body.lb-disable-scrolling {
         z-index: 999;
         margin-top: 0px;
     }
+    
+   .lb-data .lb-number {
+      margin-bottom: 20px;
+   }
+    
+    .button-container {
+       font-size: 1.0rem;
+    }
 }
 
 
@@ -501,6 +506,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
