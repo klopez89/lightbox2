@@ -401,6 +401,7 @@ body.lb-disable-scrolling {
     font-size: 1rem;
     line-height: 1rem;
     left: 0;
+    text-align: left;
     z-index: 3;
     -webkit-transition: all 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: all 0.3s ease-in-out , transform 0.3s ease-in-out;

@@ -131,8 +131,8 @@
             <div class="lb-data-background">
               <div class="lb-data">
                 <div class="lb-data-details">
-                  <button class="toggle-hidden-button" id="toggleHiddenButton">Toggle Hidden</button>
                   <span class="lb-prompt"></span>
+                  <button class="toggle-hidden-button" id="toggleHiddenButton">Show Prompt Details</button>
                   <span class="lb-number"></span>
                 </div>
                 <div class="lb-button-menu">
@@ -272,8 +272,10 @@
       if (child.classList.contains('open')) {
         const childHeight = child.offsetHeight;
         child.style.top = `-${childHeight}px`;
+        toggleButton.innerHTML = 'Hide Prompt Details'
       } else {
         child.style.top = '0px';
+        toggleButton.innerHTML = 'Show Prompt Details'
       }
     });
   };
