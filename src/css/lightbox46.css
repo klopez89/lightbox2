@@ -116,7 +116,6 @@ body.lb-disable-scrolling {
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
     transition: opacity 0.6s;
-    background-color: blanchedalmond;
 }
 
 .lb-nav a.lb-prev:hover {
@@ -135,7 +134,6 @@ body.lb-disable-scrolling {
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
     transition: opacity 0.6s;
-    background-color: darkturquoise;
 }
 
 .lb-nav a.lb-next:hover {
@@ -437,9 +435,8 @@ body.lb-disable-scrolling {
   }
 
   .lb-nav {
-        z-index: 2;
-        background-color: rgba(255, 247, 236, 0.26);
-    }
+    z-index: 2;
+  }
 
   .lb-nav a.lb-prev {
     width: 35%;
