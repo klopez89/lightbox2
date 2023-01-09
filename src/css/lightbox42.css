@@ -418,7 +418,7 @@ body.lb-disable-scrolling {
 
 /* Media Queries */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024) {
  .lightbox-container {
     display: flex;
     flex-direction: column-reverse;
@@ -458,11 +458,7 @@ body.lb-disable-scrolling {
    .lb-button-menu {
     margin-left: 5px;
     margin-bottom: 5px;
- }
-}
-
-/* On screens that are 992px or less */
-@media screen and (max-width: 992px) {
+  }
 
   .lb-close-alt {
     display: block;
@@ -471,7 +467,6 @@ body.lb-disable-scrolling {
   .lb-data .lb-close {
     display: none;
   }
-
 }
 
 
