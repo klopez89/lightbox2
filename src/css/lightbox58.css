@@ -182,7 +182,7 @@ body.lb-disable-scrolling {
     font-size: 1.5rem;
     line-height: 1.8rem;
     color: white;
-    max-height: 250px;
+    max-height: 130px;
     overflow-y: scroll;
 }
 
@@ -437,7 +437,7 @@ body.lb-disable-scrolling {
     font-size: 1rem;
     line-height: 1.3rem;
     margin-bottom: 15px;
-    max-height: 100px;
+    max-height: 60px;
     overflow-y: scroll;
     position: relative; 
   }
@@ -532,6 +532,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
