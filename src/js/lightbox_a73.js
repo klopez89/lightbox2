@@ -485,8 +485,8 @@
     function postResize() {
 
       self.$lightbox.find('.lb-dataContainer').width(newWidth);
-      self.$lightbox.find('.lb-prev').height(newHeight);
-      self.$lightbox.find('.lb-next').height(newHeight);
+      self.$lightbox.find('.lb-prev').height(newHeight * 0.8);
+      self.$lightbox.find('.lb-next').height(newHeight * 0.8);
       self.$lightbox.find('.lb-nav').height(newHeight * 0.8);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
