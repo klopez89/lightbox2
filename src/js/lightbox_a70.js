@@ -141,9 +141,9 @@
                 </div>
                 <div class="lb-button-menu">
                   <div class="button-container">
-                    <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button selected"></i></button>
-                    <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button selected"></i></button>
-                    <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button selected"></i></button>
+                    <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button"></i></button>
+                    <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button"></i></button>
+                    <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button"></i></button>
                   </div>
                   <div class="right-button-container">
                     <button class="lb-button" id="lbDownloadButton"><i class="fa fa-download lb-download-button"></i></button>
@@ -368,8 +368,8 @@
     // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
     $('.lb-loader').fadeIn('slow');
-    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-prompt').hide();
-    this.$lightbox.find('.lb-caption').animate({opacity: '100%'}, 'fast', 'linear');
+    // this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-prompt').hide();
+    this.$lightbox.find('.lb-caption').animate({opacity: '100%'}, this.options.imageFadeDuration);
 
     this.$outerContainer.addClass('animating');
 
