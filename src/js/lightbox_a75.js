@@ -347,6 +347,17 @@
       transform: 'translate(-50%, -50%)'
     }).fadeIn(this.options.fadeDuration);
 
+
+    // Add an event listener for the keydown event of the document
+    document.addEventListener('keydown', (event) => {
+      // Check if the key pressed is the Esc key (key code 27)
+      if (event.keyCode === 27) {
+        // Call the escKeyPressed function
+        this.end();
+      }
+    });
+
+
     // Disable scrolling of the page while open
     if (this.options.disableScrolling) {
       $('body').addClass('lb-disable-scrolling');
