@@ -487,7 +487,7 @@
       self.$lightbox.find('.lb-dataContainer').width(newWidth);
       self.$lightbox.find('.lb-prev').height(newHeight);
       self.$lightbox.find('.lb-next').height(newHeight);
-      self.$lightbox.find('.lb-nav').height(newHeight);
+      self.$lightbox.find('.lb-nav').height(newHeight * 0.8);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
