@@ -488,6 +488,10 @@
       self.$lightbox.find('.lb-prev').height(newHeight * 0.8);
       self.$lightbox.find('.lb-next').height(newHeight * 0.8);
       self.$lightbox.find('.lb-nav').height(newHeight * 0.8);
+      //adjust nav top positions in order to have bottom edge alignment with image on vertical card and with entire lightbox container on horizontal card
+      self.$lightbox.find('.lb-prev').css('top', `${newHeight * 0.2}px`);
+      self.$lightbox.find('.lb-next').css('top', `${newHeight * 0.2}px`);
+      self.$lightbox.find('.lb-nav').css('top', `${newHeight * 0.2}px`);
 
       // Set focus on one of the two root nodes so keyboard events are captured.
       // self.$overlay.focus(); // enabling this caused a jump when i was at the bottom of the body on iphone, so removed it
