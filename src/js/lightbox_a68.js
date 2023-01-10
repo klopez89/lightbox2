@@ -47,7 +47,7 @@
     fitImagesInViewport: true,
     imageFadeDuration: 600,
     // maxWidth: 800,
-    maxHeight: 480,
+    maxHeight: 420,
     positionFromTop: 50,
     resizeDuration: 700,
     showImageNumberLabel: true,
