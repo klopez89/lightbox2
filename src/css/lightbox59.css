@@ -238,10 +238,10 @@ body.lb-disable-scrolling {
     font-size: 1rem;
     line-height: 1rem;
     color: lightgray;
-    position: absolute;    
+    position: absolute;
     margin: auto;
     top: 105%;
-    left: 50%;
+    left: calc(50% - 28px);
     transform: translateY(-50%);
     z-index: 999;
     margin-top: 10px;
@@ -250,7 +250,7 @@ body.lb-disable-scrolling {
 .lb-dismiss {
     background-color: transparent;
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 10px;
 }
 
@@ -532,6 +532,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
