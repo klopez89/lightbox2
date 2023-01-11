@@ -95,9 +95,11 @@
   // Attach event handlers to the new DOM elements. click click click
   Lightbox.prototype.build = function() {
     if ($('#lightbox').length > 0) {
+        console.log('Leaving build function cuz we already have a lightbox i think');
         return;
     }
 
+  console.log('Building a new lightbox instance');
     var self = this;
 
     // The two root notes generated, #lightboxOverlay and #lightbox are given
