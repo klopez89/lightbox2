@@ -661,7 +661,7 @@
         $(like_button_iElement).addClass('selected');
       }
 
-      console.log(`the is_liked value for currentImageIndex: ${this.album[this.currentImageIndex].is_liked}, and containsSelected: ${containsSelected}`);
+      console.log(`the is_liked typeof for currentImageIndex: ${typeof this.album[this.currentImageIndex].is_liked}, and containsSelected type: ${typeof containsSelected}`);
       if (this.album[this.currentImageIndex].is_liked == false && containsSelected == true) {
         console.log(`class list before removal: ${button_classList}`);
         $(like_button_iElement).removeClass('selected');
