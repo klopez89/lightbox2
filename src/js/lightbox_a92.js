@@ -141,8 +141,8 @@
                 </div>
                 <div class="lb-button-menu">
                   <div class="button-container">
-                    <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button"></i></button>
                     <button class="lb-button" id="lbFavButton"><i class="fa fa-heart lb-favorite-button"></i></button>
+                    <button class="lb-button" id="lbLikeButton"><i class="fa fa-thumbs-up lb-like-button"></i></button>
                     <button class="lb-button" id="lbFlagButton"><i class="fa fa-flag lb-flag-button"></i></button>
                   </div>
                   <div class="right-button-container">
