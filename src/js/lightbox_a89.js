@@ -313,14 +313,16 @@
     }
 
     // Support both data-lightbox attribute and rel attribute implementations
+    
+    let isLikedValue = $link.attr('data-is-liked');
+    console.log(`isLikedValue just before adding rest of links to album: ${isLikedValue}`);
+
     var dataLightboxValue = $link.attr('data-lightbox');
     var $links;
-
 
     if (dataLightboxValue) {
       $links = $($link.prop('tagName') + '[data-lightbox="' + dataLightboxValue + '"]');
       for (var i = 0; i < $links.length; i = ++i) {
-        console.log(`link that is being added to album is: ${$links[i]}`);
         addToAlbum($($links[i]));
         if ($links[i] === $link[0]) {
           imageNumber = i;
