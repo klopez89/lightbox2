@@ -316,7 +316,8 @@
     var dataLightboxValue = $link.attr('data-lightbox');
     var $links;
 
-    console.log('Attemnpting to construct album structs for lightbox');
+    console.log(`Attempting to construct album structs for lightbox, where is_liked is: ${is_liked}`);
+    
     if (dataLightboxValue) {
       $links = $($link.prop('tagName') + '[data-lightbox="' + dataLightboxValue + '"]');
       for (var i = 0; i < $links.length; i = ++i) {
