@@ -302,6 +302,8 @@
         hidden_details: $link.attr('data-hidden-details'),
         prompt: $link.attr('data-prompt'),
         prompt_id: $link.attr('data-prompt-id'),
+        is_liked: $link.attr('data-is-liked'),
+        is_favorited: $link.attr('data-is-favorited'),
         like_btn_func: $link.attr('data-like-func'),
         fav_btn_func: $link.attr('data-fav-func'),
         flag_btn_func: $link.attr('data-flag-func'),
@@ -645,10 +647,16 @@
     // Configure social and share buttons
       // Like
     if (typeof this.album[this.currentImageIndex].like_btn_func !== 'undefined' &&
-      this.album[this.currentImageIndex].like_btn_func !== '') {
+    this.album[this.currentImageIndex].like_btn_func !== '') {
       var $likebutton = this.$lightbox.find('#lbLikeButton');
       $likebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].like_btn_func);
       $likebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+
+      if (typeof this.album[this.currentImageIndex].is_liked !== 'undefined' &&
+      this.album[this.currentImageIndex].is_liked) {
+        let like_button_iElement = $($likebutton[0]).children("i")[0];
+        $(like_button_iElement).addClass('selected');
+      }
       $likebutton.fadeIn('fast');
     }
 

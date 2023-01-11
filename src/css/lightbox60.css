@@ -404,17 +404,17 @@ body.lb-disable-scrolling {
     }    
 
   .lb-prompt-container::after {
-      content: "";
-      position: absolute; 
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 30px;  /* Set the height of the ::after pseudo-element to 10px */
-      background: linear-gradient(to bottom, transparent 0%, black 100%);  /* Set the gradient background */
-      pointer-events: none;
-      display: none;
-    }
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 23px;
+    background: linear-gradient(rgba(148, 148, 148, 0), rgba(0, 0, 0, 0.76));
+    pointer-events: none;
+    display: none;
+}
 
     .lb-prompt-container.showing::after {
       display: block;
@@ -532,6 +532,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
