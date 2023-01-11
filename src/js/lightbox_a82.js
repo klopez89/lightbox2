@@ -663,9 +663,7 @@
 
       console.log(`the is_liked typeof for currentImageIndex: ${typeof this.album[this.currentImageIndex].is_liked}, and containsSelected type: ${typeof containsSelected}`);
       if (this.album[this.currentImageIndex].is_liked == false && containsSelected == true) {
-        console.log(`class list before removal: ${button_classList}`);
         $(like_button_iElement).removeClass('selected');
-        console.log(`class list after removal: ${like_button_iElement.classList}`);
       }
 
       $likebutton.fadeIn('fast');
