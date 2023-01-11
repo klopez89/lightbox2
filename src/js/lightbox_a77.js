@@ -652,11 +652,19 @@
       $likebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].like_btn_func);
       $likebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
 
-      if (typeof this.album[this.currentImageIndex].is_liked !== 'undefined' &&
-      this.album[this.currentImageIndex].is_liked) {
-        let like_button_iElement = $($likebutton[0]).children("i")[0];
+
+      let like_button_iElement = $($likebutton[0]).children("i")[0];
+      let button_classList = like_button_iElement.classList;
+      let containsSelected = button_classList.contains('selected');
+
+      if (this.album[this.currentImageIndex].is_liked && containsSelected == false) {
         $(like_button_iElement).addClass('selected');
       }
+
+      if (this.album[this.currentImageIndex].is_liked == false && containsSelected == true) {
+        $(like_button_iElement).removeClass('selected');
+      }
+
       $likebutton.fadeIn('fast');
     }
 
