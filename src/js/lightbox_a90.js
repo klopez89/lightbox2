@@ -313,9 +313,6 @@
     }
 
     // Support both data-lightbox attribute and rel attribute implementations
-    
-    let isLikedValue = $link.attr('data-is-liked');
-    console.log(`isLikedValue just before adding rest of links to album: ${isLikedValue}`);
 
     var dataLightboxValue = $link.attr('data-lightbox');
     var $links;
@@ -521,18 +518,12 @@
       var $promptContainer = self.$lightbox.find('.lb-prompt-container');
 
       const scrollHeight = $prompt.prop('scrollHeight');
-      console.log(`the scroll height: ${scrollHeight}, and max height: ${maxHeight}`);
 
       if (scrollHeight > maxHeight) {
-        console.log(`class list for prompt container before adding, ${$promptContainer.attr('class')}`);
         $promptContainer.addClass('showing');
-        console.log(`class list for prompt container after adding, ${$promptContainer.attr('class')}`);
       } else {
-        console.log(`class list for prompt container before removing, ${$promptContainer.attr('class')}`);
         $promptContainer.removeClass('showing');
-        console.log(`class list for prompt container after removing, ${$promptContainer.attr('class')}`);
       }
-
     }
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {
@@ -656,7 +647,6 @@
       $likebutton[0].setAttribute('onclick', this.album[this.currentImageIndex].like_btn_func);
       $likebutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
 
-
       let like_button_iElement = $($likebutton[0]).children("i")[0];
       let button_classList = like_button_iElement.classList;
       let containsSelected = button_classList.contains('selected');
@@ -679,6 +669,18 @@
       var $favbutton = this.$lightbox.find('#lbFavButton');
       $favbutton[0].setAttribute('onclick', this.album[this.currentImageIndex].fav_btn_func);
       $favbutton[0].setAttribute('prompt-id', this.album[this.currentImageIndex].prompt_id)
+
+      let fave_button_iElement = $($favbutton[0]).children("i")[0];
+      let containsSelected = fave_button_iElement.classList.contains('selected');
+
+      if (this.album[this.currentImageIndex].is_favorited && containsSelected == false) {
+        $(fave_button_iElement).addClass('selected');
+      }
+
+      if (this.album[this.currentImageIndex].is_favorited == false && containsSelected == true) {
+        $(fave_button_iElement).removeClass('selected');
+      }
+
       $favbutton.fadeIn('fast');
     }
       // Flag
