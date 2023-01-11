@@ -316,11 +316,11 @@
     var dataLightboxValue = $link.attr('data-lightbox');
     var $links;
 
-    console.log(`Attempting to construct album structs for lightbox, where is_liked is: ${is_liked}`);
-    
+
     if (dataLightboxValue) {
       $links = $($link.prop('tagName') + '[data-lightbox="' + dataLightboxValue + '"]');
       for (var i = 0; i < $links.length; i = ++i) {
+        console.log(`link that is being added to album is: ${$($links[i])}`);
         addToAlbum($($links[i]));
         if ($links[i] === $link[0]) {
           imageNumber = i;
