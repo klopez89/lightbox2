@@ -82,12 +82,13 @@ body.lb-disable-scrolling {
 }
 
 .lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .lb-container > .nav {
@@ -116,6 +117,7 @@ body.lb-disable-scrolling {
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
     transition: opacity 0.6s;
+    pointer-events: auto;
 }
 
 .lb-nav a.lb-prev:hover {
@@ -134,6 +136,7 @@ body.lb-disable-scrolling {
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
     transition: opacity 0.6s;
+    pointer-events: all;
 }
 
 .lb-nav a.lb-next:hover {
@@ -532,6 +535,7 @@ body.lb-disable-scrolling {
  } 
     
 }
+
 
 
 
